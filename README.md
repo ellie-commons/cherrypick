@@ -14,6 +14,12 @@ Cherrypick is designed and developed primarily for [elementary OS]. The latest s
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.cherrypick) 
 
 
+## 💝 Donations
+
+You can donate to various contributors:
+ - teamcons, the main devs and maintainers behind Cherrypick (https://ko-fi.com/teamcons)
+ - Phoneybadger, the initial creator of the app (https://ko-fi.com/X8X7D99T6)
+
 
 ## 🏗️ Building
 
@@ -37,8 +43,6 @@ flatpak install appcenter io.elementary.Platform//8.2 io.elementary.Sdk//8.2
 
 Then follow the elementary OS instructions
 
-## Support Me
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X7D99T6)
 
 ## Credits
 - Directly inspired by and uses some code from the now unmaintained [ColorPicker](https://github.com/RonnyDo/ColorPicker)
