@@ -17,8 +17,8 @@ Cherrypick is designed and developed primarily for [elementary OS]. The latest s
 ## 💝 Donations
 
 You can donate to various contributors:
- - teamcons, the main devs and maintainers behind Cherrypick (https://ko-fi.com/teamcons)
  - Phoneybadger, the initial creator of the app (https://ko-fi.com/X8X7D99T6)
+ - teamcons, the main devs and maintainers behind Cherrypick (https://ko-fi.com/teamcons)
 
 
 ## 🏗️ Building
