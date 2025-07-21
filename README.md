@@ -1,85 +1,42 @@
+
 <div align="center">
-  <div align="center">
-    <img src="data/icons/png/64.png" width="64">
-  </div>
-  <h1 align="center">Cherrypick</h1>
-  <p align="center">
-    A simple color picker for elementary OS
-  </p>
-  <a href="https://appcenter.elementary.io/io.github.ellie_commons.cherrypick">
-    <img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter"/>
-  </a>
+    <img alt="An icon of an eyedropper with a rainbow circle in the background" src="data/icons/png/128.png">
+  <h1>Cherrypick</h1>
+  <h3>Cherry-pick colors on your screen</h3>
+
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/rollit/blob/main/data/screenshots/window-light.png" alt="A screenshot of a window with a side displaying options and the other a single solid color"></span>
 </div>
 
-## Screenshots
-| ![Screenshot of app window in dark mode](data/screenshots/window-dark.png) | ![Screenshot of app window in light mode](data/screenshots/window-light.png) |
-|----------------------------------------------------------------------------|------------------------------------------------------------------------------|
-
-## Demo
-![Demo gif of the app being used](data/demo/demo.gif)
 
 ## Installation
 
-### On elementary OS
-On elementary OS you can get Cherrypick from the app center.
+Cherrypick is designed and developed primarily for [elementary OS]. The latest stable release is available via AppCenter.
 
-### On other distros
-Cherrypick has been designed for and tested on elementary OS. However you can always
-install Cherrypick as a flatpak on any distro with flatpak support from the elementary flatpak repository
-```
-flatpak install https://flatpak.elementary.io/repo/appstream/io.github.ellie_commons.cherrypick.flatpakref
-```
-Flatpak is the recommended method of installation, however if you don't want
-to use flatpak you can always build from source using the build instructions.
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.cherrypick) 
 
-## Usage
-If installed as flatpak the program can be launched using
-```
-flatpak run io.github.ellie_commons.cherrypick
-```
-the app can be launched directly in color picking mode using the command line
-option `--pick-color`. This could be perhaps be used to set up a keybinding.
-```
-flatpak run io.github.ellie_commons.cherrypick --pick-color
-```
-and the program should also be visible in your launcher/application menu
 
-## Building and running
-Download or clone the repo
-```
-git clone https://github.com/ellie-commons/cherrypick.git
-cd cherrypick
-```
-### Build with Flatpak
 
-Run `flatpak-builder` to build and install as flatpak for the current user
-```
-flatpak-builder build io.github.ellie_commons.cherrypick.yml --user --install --force-clean
-```
-the program should now be installed and can be run using
-```
-flatpak run com.github.phoneybadger.trimmer
+## 🏗️ Building
+
+Installation is as simple as installing the above, downloading and extracting the zip archive, changing to the new repo's directory,
+and run the following command:
+
+### On elementary OS or with its appcenter remote installed
+
+```bash
+flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.cherrypick.yml
 ```
 
-### Without flatpak
+### On other systems:
 
-You'll need the following dependencies
-- `valac`
-- `meson`
-- `libgtk-3-dev`
-- `libgranite-dev`
-- `libhandy-1-dev`
+First, install the elementary Flatpak runtime & SDK:
 
-run `meson` to set up the build environment and then use `ninja` to build
+```bash
+flatpak remote-add --if-not-exists appcenter https://flatpak.elementary.io/repo.flatpakrepo
+flatpak install appcenter io.elementary.Platform//8.2 io.elementary.Sdk//8.2
 ```
-meson build --prefix=/usr
-ninja -C build
-```
-to install use `ninja install`, execute with `io.github.ellie_commons.cherrypick`
-```
-ninja install
-io.github.ellie_commons.cherrypick
-```
+
+Then follow the elementary OS instructions
 
 ## Support Me
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X7D99T6)
