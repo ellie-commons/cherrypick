@@ -4,7 +4,7 @@
   <h1>Cherrypick</h1>
   <h3>Cherry-pick colors on your screen</h3>
 
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/rollit/blob/main/data/screenshots/window-light.png" alt="A screenshot of a window with a side displaying options and the other a single solid color"></span>
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/cherrypick/blob/main/data/screenshots/window-light.png" alt="A screenshot of a window with a side displaying options and the other a single solid color"></span>
 </div>
 
 
