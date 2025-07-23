@@ -3,6 +3,7 @@ Version=1.0
 Type=Application
 
 Name=Cherrypick
+GenericName=Color Picker
 Comment=Pick any color
 Categories=Graphics;Utility;
 
