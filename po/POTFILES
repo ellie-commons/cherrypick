@@ -1,2 +1,3 @@
-src/Widgets/Window.vala
+src/Windows/Window.vala
 src/Widgets/FormatArea.vala
+src/Application.vala
