@@ -8,6 +8,7 @@ Categories=Graphics;Utility;
 
 Icon=io.github.ellie_commons.cherrypick
 Exec=io.github.ellie_commons.cherrypick
+SingleMainWindow=true
 Terminal=false
 Keywords=Color;Pick;Eyedropper;Picker;
 Actions=ImmediatelyPick;
