@@ -22,7 +22,7 @@ config_file = configure_file(
 
 gresource = gnome.compile_resources(
     'gresource',
-    'data' / 'gresource.xml',
+    'data' / 'cherrypick.gresource.xml',
     source_dir: 'data'
 )
 
