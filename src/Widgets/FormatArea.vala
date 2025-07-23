@@ -10,7 +10,7 @@ namespace Cherrypick {
         public Cherrypick.Color color {get; set;}
         public Format color_format {get; set;}
 
-        public Gtk.ComboBoxText format_selector;
+        public Gtk.DropDown format_selector;
         private Gtk.Entry format_entry;
 
         Cherrypick.ColorController color_controller;
@@ -36,8 +36,8 @@ namespace Cherrypick {
         private void handle_active_format () {
             notify ["color-format"].connect (update_entry);
 
-            format_selector.changed.connect (() => {
-                color_format = (Format) format_selector.active;
+            format_selector.notify["selected"].connect (() => {
+                color_format = (Format) format_selector.selected;
             });
         }
 
@@ -67,13 +67,12 @@ namespace Cherrypick {
             format_entry.secondary_icon_tooltip_text = _("Click to copy this colour to your clipboard");
 
 
+            var supported_formats = new Gtk.StringList (Cherrypick.Format.all_string ());
 
-            format_selector = new Gtk.ComboBoxText () {
-                tooltip_text = _("Choose your preferred format to display picked colours")
+            format_selector = new Gtk.DropDown (supported_formats, null) {
+                tooltip_text = _("Choose your preferred format to display picked colours"),
+                width_request = 72
             };
-            foreach (var format in Format.all ()) {
-                format_selector.append_text (format.to_string ());
-            }
 
             format_entry.icon_press.connect ((icon_pos) => {
                 if (icon_pos == Gtk.EntryIconPosition.PRIMARY) {
@@ -162,7 +161,7 @@ namespace Cherrypick {
             var settings = Settings.get_instance ();
             var format = settings.get_enum ("color-format");
             color_format = (Format) format;
-            format_selector.active = color_format;
+            format_selector.selected = color_format;
         }
 
         public void save_format_to_gsettings () {

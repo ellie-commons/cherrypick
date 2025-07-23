@@ -22,7 +22,6 @@
 namespace Cherrypick {
     public class Application : Gtk.Application {
         private Window? window;
-        private Xdp.Portal portal;
         private static bool is_immediately_pick = false;
 
         private OptionEntry[] CMD_OPTION_ENTRIES = {

@@ -126,7 +126,7 @@ namespace Cherrypick {
             // Make sure all the tooltips are up to date
             history_buttons.update_buttons ();
 
-            format_area.format_selector.changed.connect_after (() => {
+            format_area.format_selector.activate.connect_after (() => {
                 history_buttons.update_buttons ();
             });
 
