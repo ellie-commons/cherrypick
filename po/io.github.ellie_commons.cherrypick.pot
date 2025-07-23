@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-18 20:52+0200\n"
+"POT-Creation-Date: 2025-07-23 19:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. /TRANSLATORS: Do not translate app name
-#: src/Widgets/Window.vala:17 src/Widgets/Window.vala:36
+#: src/Widgets/Window.vala:29 src/Widgets/Window.vala:52
 msgid "Cherrypick"
 msgstr ""
 
-#: src/Widgets/Window.vala:48
+#: src/Widgets/Window.vala:64
 msgid "Format"
 msgstr ""
 
-#: src/Widgets/Window.vala:57
+#: src/Widgets/Window.vala:73
 msgid "History"
 msgstr ""
 
-#: src/Widgets/Window.vala:66
+#: src/Widgets/Window.vala:82
 msgid "Pick Color"
 msgstr ""
 
-#: src/Widgets/Window.vala:68
+#: src/Widgets/Window.vala:84
 msgid ""
 "Allows you to click on a colour on the screen to get its code in the "
 "preferred format"
@@ -56,6 +56,6 @@ msgstr ""
 msgid "Copied to clipboard!"
 msgstr ""
 
-#: src/Widgets/FormatArea.vala:152
+#: src/Widgets/FormatArea.vala:151
 msgid "Cannot detect colour!"
 msgstr ""

@@ -1,33 +1,37 @@
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: ru\n"
-"Language-Team: none\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: 2022-09-27 20:44+0900\n"
-"POT-Creation-Date: 2025-07-18 20:52+0200\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-23 19:28+0200\n"
+"PO-Revision-Date: 2022-09-27 20:44+0900\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: data/picker.desktop.in:6
-#: data/picker.metainfo.xml.in:4
+#: data/picker.desktop.in:6 data/picker.metainfo.xml.in:4
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
 #: data/picker.desktop.in:7
+msgid "Color Picker"
+msgstr ""
+
+#: data/picker.desktop.in:8
 #, fuzzy
 msgid "Pick any color"
 msgstr "Выбрать цвет"
 
-#: data/picker.desktop.in:13
+#: data/picker.desktop.in:15
 #, fuzzy
 msgid "Color;Pick;Eyedropper;Picker;"
 msgstr "Цвет;Выбрать;Пипетка;Выбор"
 
-#: data/picker.desktop.in:18
+#: data/picker.desktop.in:20
 msgid "Immediately pick a color"
 msgstr "Сразу же выберите цвет"
 
@@ -54,16 +58,21 @@ msgstr "Запоминание вашего предпочитаемого фо�
 
 #: data/picker.metainfo.xml.in:16
 #, fuzzy
-msgid "Color history remembers your last picked colors (hover to check their code)"
+msgid ""
+"Color history remembers your last picked colors (hover to check their code)"
 msgstr "История последних выбранных цветов"
 
 #: data/picker.metainfo.xml.in:17
 msgid "Curious about a color? Copy paste it from your clipboard to preview it"
-msgstr "Любопытно узнать о цвете? Скопируйте его из буфера обмена для предварительного просмотра"
+msgstr ""
+"Любопытно узнать о цвете? Скопируйте его из буфера обмена для "
+"предварительного просмотра"
 
 #: data/picker.metainfo.xml.in:18
 msgid "You can set a keybind to immediately pick and copy to clipboard!"
-msgstr "Вы можете установить привязку клавиш, чтобы немедленно выбрать и скопировать в буфер обмена!"
+msgstr ""
+"Вы можете установить привязку клавиш, чтобы немедленно выбрать и скопировать "
+"в буфер обмена!"
 
 #: data/picker.metainfo.xml.in:30
 #, fuzzy
@@ -78,92 +87,129 @@ msgstr "Главное окно Cherrypick"
 msgid "Main window with dark theme"
 msgstr "Главное окно с темной темой"
 
-#: data/picker.metainfo.xml.in:56
-msgid "Add the ability to immediately pick and copy to clipboard, no UI needed"
-msgstr "Добавьте возможность мгновенного выбора и копирования в буфер обмена, без использования пользовательского интерфейса"
-
 #: data/picker.metainfo.xml.in:57
-msgid "You can right-click on app icon and choose \"Immediately pick\""
-msgstr "Вы можете щелкнуть правой кнопкой мыши на значке приложения и выбрать \"Немедленно выбрать\"."
+msgid "App now works on ARM thanks to @ryonakano!"
+msgstr ""
 
 #: data/picker.metainfo.xml.in:58
-msgid "Or set a keybind to \"flatpak run io.ellie_commons.cherrypick --immediately-pick\""
-msgstr "Или установите привязку клавиш на \"flatpak run io.ellie_commons.cherrypick --immediately-pick\"."
+#, fuzzy
+msgid "Add the ability to immediately pick and copy to clipboard"
+msgstr ""
+"Добавьте возможность мгновенного выбора и копирования в буфер обмена, без "
+"использования пользовательского интерфейса"
 
-#: data/picker.metainfo.xml.in:63
+#: data/picker.metainfo.xml.in:59
+msgid "You can right-click on app icon and choose \"Immediately pick\""
+msgstr ""
+"Вы можете щелкнуть правой кнопкой мыши на значке приложения и выбрать "
+"\"Немедленно выбрать\"."
+
+#: data/picker.metainfo.xml.in:60
+msgid ""
+"Or set a keybind to \"flatpak run io.ellie_commons.cherrypick --immediately-"
+"pick\""
+msgstr ""
+"Или установите привязку клавиш на \"flatpak run io.ellie_commons.cherrypick "
+"--immediately-pick\"."
+
+#: data/picker.metainfo.xml.in:61
+msgid "Updated deprecated widgets"
+msgstr ""
+
+#: data/picker.metainfo.xml.in:62
+msgid "Minute tweaks by @ryonakano thanks again!"
+msgstr ""
+
+#: data/picker.metainfo.xml.in:67
 msgid "Remove minor artifacts"
 msgstr "Удалите незначительные артефакты"
 
-#: data/picker.metainfo.xml.in:69
+#: data/picker.metainfo.xml.in:73
 msgid "2.0.0: The revival!"
 msgstr "2.0.0: Возрождение!"
 
-#: data/picker.metainfo.xml.in:71
-msgid "A new name, Cherrypick! Blessed by @adithyankv, the OG author. Thank you!"
+#: data/picker.metainfo.xml.in:75
+msgid ""
+"A new name, Cherrypick! Blessed by @adithyankv, the OG author. Thank you!"
 msgstr "Новое имя, Черрипик! Благословлено @adithyankv, автором OG. Спасибо!"
 
-#: data/picker.metainfo.xml.in:72
-msgid "Port to modern tech (GTK4, Wayland, portals, elementary 8). Not broken anymore!"
-msgstr "Переход на современные технологии (GTK4, Wayland, порталы, elementary 8). Больше не ломается!"
+#: data/picker.metainfo.xml.in:76
+msgid ""
+"Port to modern tech (GTK4, Wayland, portals, elementary 8). Not broken "
+"anymore!"
+msgstr ""
+"Переход на современные технологии (GTK4, Wayland, порталы, elementary 8). "
+"Больше не ломается!"
 
-#: data/picker.metainfo.xml.in:73
+#: data/picker.metainfo.xml.in:77
 msgid "CMYK model available thanks to @DSLitvinov"
 msgstr "Модель CMYK доступна благодаря @DSLitvinov"
 
-#: data/picker.metainfo.xml.in:74
+#: data/picker.metainfo.xml.in:78
 msgid "HSL model available thanks to @ckruse's work on ColorMate"
 msgstr "Модель HSL доступна благодаря работе @ckruse над ColorMate"
 
-#: data/picker.metainfo.xml.in:75
+#: data/picker.metainfo.xml.in:79
 msgid "Also apparently HSLA is a thing so i added it"
 msgstr "Также, очевидно, HSLA - это вещь, поэтому я добавил ее."
 
-#: data/picker.metainfo.xml.in:76
+#: data/picker.metainfo.xml.in:80
 msgid "New feature: You can now paste a color from clipboard to preview it"
-msgstr "Новая функция: Теперь вы можете вставить цвет из буфера обмена, чтобы предварительно просмотреть его"
+msgstr ""
+"Новая функция: Теперь вы можете вставить цвет из буфера обмена, чтобы "
+"предварительно просмотреть его"
 
-#: data/picker.metainfo.xml.in:77
-msgid "New feature: Hover over history buttons to see their code in your preferred format"
-msgstr "Новая функция: Наведите курсор на кнопки истории, чтобы увидеть их код в удобном для вас формате"
+#: data/picker.metainfo.xml.in:81
+msgid ""
+"New feature: Hover over history buttons to see their code in your preferred "
+"format"
+msgstr ""
+"Новая функция: Наведите курсор на кнопки истории, чтобы увидеть их код в "
+"удобном для вас формате"
 
-#: data/picker.metainfo.xml.in:82
+#: data/picker.metainfo.xml.in:86
 msgid "Add command line flag to open directly in color picking mode"
-msgstr "Добавлен флаг командной строки для открытия сразу в режиме выбора цвета"
+msgstr ""
+"Добавлен флаг командной строки для открытия сразу в режиме выбора цвета"
 
-#: data/picker.metainfo.xml.in:89
+#: data/picker.metainfo.xml.in:93
 msgid "Fix layout bug when opening multiple instances"
 msgstr "Исправлен баг интерфейса при открытии нескольких окон"
 
-#: data/picker.metainfo.xml.in:90
+#: data/picker.metainfo.xml.in:94
 msgid "Make pick color button the default focused widget"
 msgstr "Кнопка выбора цвета теперь сфокусирована по умолчанию"
 
-#: data/picker.metainfo.xml.in:91
+#: data/picker.metainfo.xml.in:95
 msgid "Remove payment option from appcenter"
 msgstr "Убрана опция покупки из AppCenter"
 
-#: data/picker.metainfo.xml.in:98
+#: data/picker.metainfo.xml.in:102
 msgid "Update to elementary platform 7"
 msgstr "Обновлено до elementary platform 7"
 
-#: data/picker.metainfo.xml.in:99
+#: data/picker.metainfo.xml.in:103
 msgid "Minor change to app description"
 msgstr "Небольшое изменение описания приложения"
 
-#: data/picker.metainfo.xml.in:105
+#: data/picker.metainfo.xml.in:109
 msgid "Fix inaccuracies in metadata"
 msgstr "Исправлены неаккуратности в метаданных"
 
-#: data/picker.metainfo.xml.in:110
+#: data/picker.metainfo.xml.in:114
 msgid "Add stripe key"
 msgstr "Добавлен ключ Stripe"
 
-#: data/picker.metainfo.xml.in:115
+#: data/picker.metainfo.xml.in:119
 msgid "Initial release"
 msgstr "Начальный релиз"
 
-#~ msgid "A minimal color picker that lets you pick colors from anywhere on your screen"
-#~ msgstr "Минималистичная палитра, которая позволяет вам выбирать цвет с любой точки вашего экрана"
+#~ msgid ""
+#~ "A minimal color picker that lets you pick colors from anywhere on your "
+#~ "screen"
+#~ msgstr ""
+#~ "Минималистичная палитра, которая позволяет вам выбирать цвет с любой "
+#~ "точки вашего экрана"
 
 #~ msgid "Format"
 #~ msgstr "Формат"
