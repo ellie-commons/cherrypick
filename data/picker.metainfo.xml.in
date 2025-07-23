@@ -49,15 +49,17 @@
       </image>
     </screenshot>
   </screenshots>
+
   <releases>
     <release date="2025-07-14" version="2.1.0">
       <description>
         <ul>
-          <li>Add the ability to immediately pick and copy to clipboard, no UI needed</li>
+          <li>App now works on ARM thanks to @ryonakano!</li>
+          <li>Add the ability to immediately pick and copy to clipboard</li>
           <li>You can right-click on app icon and choose "Immediately pick"</li>
           <li>Or set a keybind to "flatpak run io.ellie_commons.cherrypick --immediately-pick"</li>
           <li>Updated deprecated widgets</li>
-          <li>Minute tweaks by @ryonakano</li>
+          <li>Minute tweaks by @ryonakano thanks again!</li>
         </ul>
       </description>
     </release>
