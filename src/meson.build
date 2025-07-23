@@ -4,7 +4,7 @@ picker_source_files = files(
   'Models/Color.vala',
   'Models/Format.vala',
   'Models/ColorHistory.vala',
-  'Widgets/Window.vala',
+  'Windows/Window.vala',
   'Widgets/ColorPreview.vala',
   'Widgets/FormatArea.vala',
   'Widgets/HistoryButtons.vala',
