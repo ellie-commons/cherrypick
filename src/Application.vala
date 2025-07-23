@@ -23,15 +23,16 @@ namespace Cherrypick {
     public class Application : Gtk.Application {
         private Window? window;
         private Xdp.Portal portal;
+        private static bool is_immediately_pick = false;
 
-        private const OptionEntry[] CMD_OPTION_ENTRIES = {
-            {"immediately-pick", 'p', OptionFlags.NONE, OptionArg.NONE, null, N_("Immediately pick a colour and copy it to clipboard"), null}
+        private OptionEntry[] CMD_OPTION_ENTRIES = {
+            {"immediately-pick", 'p', OptionFlags.NONE, OptionArg.NONE, ref is_immediately_pick, _("Immediately pick a colour and copy it to clipboard"), null}
         };
 
         public Application () {
             Object (
                 application_id: "io.github.ellie_commons.cherrypick",
-                flags: ApplicationFlags.HANDLES_COMMAND_LINE
+                flags: ApplicationFlags.FLAGS_NONE
             );
         }
 
@@ -75,6 +76,15 @@ namespace Cherrypick {
         }
 
         public override void activate () {
+            /* Opens and immediately starts picking color if the --immediately-pick
+               flag is passed when launching from the command line. This could
+               be helpful for the user to set up keybindings and stuff */
+            if (Application.is_immediately_pick) {
+                //FIXME: Prevent window from showing if we do an immediate pick
+                //Quit or anything that makes Activate not do a window, end up in Picking failing
+                immediately_pick ();
+            }
+
             /* Restricting to only one open instance of the application window.
                It doesn't make much sense to have multiple instances as there
                are no real valid use cases. And with the current architecture
@@ -96,23 +106,6 @@ namespace Cherrypick {
             } else {
                     window.present ();
             }
-        }
-
-        public override int command_line (ApplicationCommandLine command) {
-
-            /* Opens and immediately starts picking color if the --immediately-pick
-               flag is passed when launching from the command line. This could
-               be helpful for the user to set up keybindings and stuff */
-            var options = command.get_options_dict ();
-            if (options.contains ("immediately-pick")) {
-                immediately_pick ();
-
-            }
-
-            //FIXME: Prevent window from showing if we do an immediate pick
-            //Quit or anything that makes Activate not do a window, end up in Picking failing
-            activate ();
-            return 0;
         }
 
         private void immediately_pick () {
