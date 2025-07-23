@@ -1,0 +1,38 @@
+id: io.github.ellie_commons.jorts
+# elementary SDK is not available on Flathub, so use the elementary BaseApp instead
+base: io.elementary.BaseApp
+base-version: 'circe-24.08'
+runtime: org.gnome.Platform
+runtime-version: '48'
+sdk: org.gnome.Sdk
+command: io.github.ellie_commons.jorts
+
+finish-args:
+  - '--share=ipc'
+  - '--device=dri'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+
+cleanup:
+  -  '/include'
+  -  '/lib/pkgconfig'
+  -  '/man'
+  -  '/share/doc'
+  -  '/share/gtk-doc'
+  -  '/share/man'
+  -  '/share/pkgconfig'
+  -  '/share/installed-tests'
+  -  '*.la'
+  -  '*.a'
+
+modules:
+  - name: cherrypick
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/ellie-commons/cherrypick.git
+        tag: 2.1.0
+        commit: 33cb31facb513fd0ab28786d0e1da9d0724287d9
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
