@@ -24,8 +24,8 @@ namespace Cherrypick {
         private Window? window;
         private Xdp.Portal portal;
 
-        private const OptionEntry[] CMD_OPTION_ENTRIES = {
-            {"immediately-pick", 'p', OptionFlags.NONE, OptionArg.NONE, null, N_("Immediately pick a colour and copy it to clipboard"), null}
+        private OptionEntry[] CMD_OPTION_ENTRIES = {
+            {"immediately-pick", 'p', OptionFlags.NONE, OptionArg.NONE, null, _("Immediately pick a colour and copy it to clipboard"), null}
         };
 
         public Application () {
