@@ -9,6 +9,18 @@ namespace Cherrypick {
     public class Window : Gtk.Window {
         private Gtk.Button pick_button;
         private Granite.Toast toast;
+        private ColorPicker color_picker;
+        public Cherrypick.FormatArea format_area;
+
+        public SimpleActionGroup actions { get; construct; }
+        public const string ACTION_PREFIX = "app.";
+        public const string ACTION_PICK = "pick";
+
+        public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
+
+        private const GLib.ActionEntry[] ACTION_ENTRIES = {
+            { ACTION_PICK, on_pick }
+        };
 
         public Window (Gtk.Application app) {
             Object (
@@ -23,6 +35,10 @@ namespace Cherrypick {
 
         construct {
             Intl.setlocale ();
+
+            var actions = new SimpleActionGroup ();
+            actions.add_action_entries (ACTION_ENTRIES, this);
+            insert_action_group ("app", actions);
 
             // We need to hide the title area for the split headerbar
             var null_title = new Gtk.Grid () {
@@ -52,7 +68,7 @@ namespace Cherrypick {
             format_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
             format_label.add_css_class ("title-4");
 
-            var format_area = new Cherrypick.FormatArea ();
+            format_area = new Cherrypick.FormatArea ();
 
             var history_label = new Gtk.Label (_("History")) {
                 xalign = 0f,
@@ -105,7 +121,7 @@ namespace Cherrypick {
 
             child = window_handle;
 
-            var color_picker = new ColorPicker ();
+            color_picker = new ColorPicker ();
 
             // Make sure all the tooltips are up to date
             history_buttons.update_buttons ();
@@ -121,15 +137,17 @@ namespace Cherrypick {
                 }
             });
 
-            pick_button.clicked.connect (() => {
-                //application.lookup_action (Application.ACTION_START_PICK).activate (null);
-                color_picker.pick.begin ();
-            });
+            pick_button.clicked.connect (on_pick);
+            color_picker.picked.connect (format_area.copy_to_clipboard);
 
             /* when the app is opened the user probably wants to pick the color
                straight away. So setting the pick button as focused default
                action so that pressing Return or Space starts the pick */
             set_focus (pick_button);
+        }
+
+        public void on_pick () {
+            color_picker.pick.begin ();
         }
     }
 }

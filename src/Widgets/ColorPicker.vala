@@ -10,6 +10,8 @@ namespace Cherrypick {
         private Xdp.Portal portal;
         public ColorController color_controller;
 
+        public signal void picked ();
+
         construct {
             color_controller = ColorController.get_instance ();
         }
@@ -37,6 +39,7 @@ namespace Cherrypick {
                 };
                 color_controller.last_picked_color = picked_color;
                 color_controller.color_history.append (picked_color);
+                picked ();
             } catch (Error e) {
                 critical (e.message);
             }

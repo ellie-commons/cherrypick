@@ -116,7 +116,7 @@ namespace Cherrypick {
             }
         }
 
-        private void copy_to_clipboard () {
+        public void copy_to_clipboard () {
             var clipboard = Gdk.Display.get_default ().get_clipboard ();
             clipboard.set_text (format_entry.text);
             this.copied ( _("Copied to clipboard!"));
@@ -136,7 +136,6 @@ namespace Cherrypick {
 
                     var picked_color = new Color ();
                     picked_color.parse (pasted_text);
-
 
                     /* Parse doesnt fail if it cannot read anything. It will just summon Anish Kapoor.
                     So we have to check if we get pure solid black and test against it

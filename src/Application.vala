@@ -47,7 +47,6 @@ namespace Cherrypick {
             var pick_action = new SimpleAction ("pick", null);
             add_action (pick_action);
             set_accels_for_action ("app.pick", {"<Control>p"});
-            pick_action.activate.connect (immediately_pick);
         }
 
         public override void startup () {
@@ -76,14 +75,6 @@ namespace Cherrypick {
         }
 
         public override void activate () {
-            /* Opens and immediately starts picking color if the --immediately-pick
-               flag is passed when launching from the command line. This could
-               be helpful for the user to set up keybindings and stuff */
-            if (Application.is_immediately_pick) {
-                //FIXME: Prevent window from showing if we do an immediate pick
-                //Quit or anything that makes Activate not do a window, end up in Picking failing
-                immediately_pick ();
-            }
 
             /* Restricting to only one open instance of the application window.
                It doesn't make much sense to have multiple instances as there
@@ -106,58 +97,36 @@ namespace Cherrypick {
             } else {
                     window.present ();
             }
+
+            /* Opens and immediately starts picking color if the --immediately-pick
+               flag is passed when launching from the command line. This could
+               be helpful for the user to set up keybindings and stuff */
+            if (Application.is_immediately_pick) {
+                immediately_pick ();
+            }
         }
 
+        // The initial plan was to have a function that skips using a UI entirely
+        // Notify, start picking, copy result in preferred format, notify it is ready
+        // Right now however i cant seem to make it work properly, so it will just be a pick action
         private void immediately_pick () {
-            var notification = new Notification (_("Pick a color"));
+
+/*          var notification = new Notification (_("Pick a color"));
             // TRANSLATORS: "%s%%" is replaced by a colour code 
             var body = _("Pick a colour on your screen and it will be copied to your clipboard");
             notification.set_body (body);
             notification.set_priority (GLib.NotificationPriority.NORMAL);
-            this.send_notification ("notify.app", notification);
+            this.send_notification ("notify.app", notification);*/
 
-            portal = new Xdp.Portal ();
-            portal.pick_color.begin (null, null, immediately_picked);
-        }
+            window.on_pick ();
 
-        //FIXME: This is horrific and redundant and icky
-        // Ideally it would be in ColorPicker but then you dont have Applications to send notifications to
-        // Notifications need to be in the callback else it immediately fires up
-        private void immediately_picked (Object? obj, AsyncResult result) {
-                try {
-                    var color = this.portal.pick_color.end (result);
-                    double r, g, b;
+            /* var notification_end = new Notification (_("Copied to clipboard!"));
+            // TRANSLATORS: "%s%%" is replaced by a colour code 
+            var body = _("%s has been copied to your clipboard").printf (picked_formatted);
+            notification_end.set_body (body);
+            notification_end.set_priority (GLib.NotificationPriority.NORMAL);
+            this.send_notification ("notify.app", notification_end);  */
 
-                    VariantIter iter = color.iterator ();
-                    iter.next ("d", out r);
-                    iter.next ("d", out g);
-                    iter.next ("d", out b);
-
-                    var picked_color = new Color () {
-                        red = (uint8) (r * 255),
-                        green = (uint8) (g * 255),
-                        blue = (uint8) (b * 255),
-                        alpha = (double) 1.0
-                    };
-
-                    var color_controller = ColorController.get_instance ();
-                    color_controller.last_picked_color = picked_color;
-                    color_controller.color_history.append (picked_color);
-
-                    var picked_formatted = picked_color.to_preferred_string ();
-                    var clipboard = Gdk.Display.get_default ().get_clipboard ();
-                    clipboard.set_text (picked_formatted);
-
-                    var notification = new Notification (_("Copied to clipboard!"));
-                    // TRANSLATORS: "%s%%" is replaced by a colour code 
-                    var body = _("%s has been copied to your clipboard").printf (picked_formatted);
-                    notification.set_body (body);
-                    notification.set_priority (GLib.NotificationPriority.NORMAL);
-                    this.send_notification ("notify.app", notification);
-
-                } catch (Error e) {
-                    critical (e.message);
-                }
         }
     }
 }
