@@ -49,7 +49,7 @@ namespace Cherrypick {
                 var button = color_buttons[i];
                 var this_ones_color = color_controller.color_history[i];
                 button.update_color (this_ones_color);
-                button.tooltip_text = (this_ones_color.to_preferred_string());
+                button.tooltip_text = (this_ones_color.to_preferred_string ());
             }
         }
     }

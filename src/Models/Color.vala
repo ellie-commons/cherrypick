@@ -12,7 +12,6 @@ namespace Cherrypick {
         public uint8 blue {get; set;}
         public double alpha {get; set;}
 
-
         public string to_hex_string () {
             var hex_string = "#%02x%02x%02x".printf (red, green, blue).up ();
 
@@ -30,22 +29,21 @@ namespace Cherrypick {
 
             return rgb_string;
         }
-        
-        /*Convert RGB to CMYK*/ 
-        public string to_cmyk_string(){
+
+        public string to_cmyk_string () {
 
             // dividing by 255 
             float r = red / 255.0f;
             float g = green / 255.0f;
             float b = blue / 255.0f;
-            
+
              // finding the C M Y K values from the primes and the input
             // indexes: R = 0; G = 1; B = 2
-            float k = 1 - Math.fmaxf(Math.fmaxf(r,g),b);
-            uint8 cyan = (uint8)Math.roundf( (1 - r - k) / (1 - k)*100 );
-			uint8 magenta = (uint8)Math.roundf( (1 - g - k) / (1 - k)*100 );
-			uint8 yellow = (uint8)Math.roundf( (1 - b - k) / (1 - k)*100 );
-            uint8 key = (uint8)Math.roundf(k*100);
+            float k = 1 - Math.fmaxf (Math.fmaxf (r, g), b);
+            uint8 cyan = (uint8)Math.roundf ( (1 - r - k) / (1 - k) * 100 );
+            uint8 magenta = (uint8)Math.roundf ( (1 - g - k) / (1 - k) * 100 );
+            uint8 yellow = (uint8)Math.roundf ( (1 - b - k) / (1 - k) * 100 );
+            uint8 key = (uint8)Math.roundf (k * 100);
 
             var cmyk_string = "cmyk(%d, %d, %d, %d)".printf (cyan, magenta, yellow, key);
 
@@ -60,7 +58,7 @@ namespace Cherrypick {
 
             // Find greatest and smallest channel values
             var cmin = double.min (double.min (r, g), b);
-            var cmax = double.max (double.max(r, g), b);
+            var cmax = double.max (double.max (r, g), b);
             var delta = cmax - cmin;
             double h = 0, s = 0, l = 0;
 
@@ -88,11 +86,11 @@ namespace Cherrypick {
             l = (cmax + cmin) / 2;
 
             // Calculate saturation
-            s = delta == 0 ? 0 : delta / (1 - (2 * l - 1).abs());
+            s = delta == 0 ? 0 : delta / (1 - (2 * l - 1).abs ());
 
             // Multiply l and s by 100
-            s = (s * 100.0).abs();
-            l = (l * 100.0).abs();
+            s = (s * 100.0).abs ();
+            l = (l * 100.0).abs ();
 
             var hsl_string = "hsl(%d, %d, %d)".printf ((int)h, (int)s, (int)l);
 
@@ -119,7 +117,7 @@ namespace Cherrypick {
             alpha = rgba.alpha;
         }
 
-	    public string to_preferred_string () {
+        public string to_preferred_string () {
             var settings = Settings.get_instance ();
             var format = settings.get_enum ("color-format");
             switch (format) {
@@ -131,6 +129,6 @@ namespace Cherrypick {
                 case Format.HSLA: return this.to_hsla_string ();
                 default: return this.to_rgba_string ();
             }
-	    }
+        }
     }
 }

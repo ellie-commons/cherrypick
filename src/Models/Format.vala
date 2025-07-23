@@ -37,10 +37,15 @@ namespace Cherrypick {
             return {HEX, RGB, RGBA, CMYK, HSL, HSLA};
         }
 
-
         public static string[] all_string () {
-            return {HEX.to_string (), RGB.to_string (), RGBA.to_string (), CMYK.to_string (), HSL.to_string (), HSLA.to_string ()};
+            return {
+                HEX.to_string (),
+                RGB.to_string (),
+                RGBA.to_string (),
+                CMYK.to_string (),
+                HSL.to_string (),
+                HSLA.to_string ()
+            };
         }
-
     }
 }
