@@ -31,7 +31,7 @@ namespace Cherrypick {
             add_css_class (name);
 
             button = new Gtk.Button () {
-                width_request = 50
+                width_request = 52
             };
 
             update_color (newcolor);
