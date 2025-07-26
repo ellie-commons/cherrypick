@@ -51,6 +51,13 @@
   </screenshots>
 
   <releases>
+    <release date="2025-07-26" version="2.1.1">
+      <description>
+        <ul>
+          <li>Clean appdata for flathub release</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-07-14" version="2.1.0">
       <description>
         <ul>

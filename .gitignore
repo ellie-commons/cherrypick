@@ -3,3 +3,4 @@ build
 .flatpak-builder
 builddir
 .potrans
+repo
