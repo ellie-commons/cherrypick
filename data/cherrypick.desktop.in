@@ -1,7 +1,5 @@
 [Desktop Entry]
-Version=1.0
 Type=Application
-
 Name=Cherrypick
 GenericName=Color Picker
 Comment=Pick any color
@@ -15,5 +13,6 @@ Keywords=Color;Pick;Eyedropper;Picker;
 Actions=ImmediatelyPick;
 
 [Desktop Action ImmediatelyPick]
-Exec=io.github.ellie_commons.cherrypick --immediately-pick
 Name=Immediately pick a color
+Icon=color-picker
+Exec=io.github.ellie_commons.cherrypick --immediately-pick
