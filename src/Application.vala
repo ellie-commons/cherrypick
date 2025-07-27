@@ -49,7 +49,6 @@ namespace Cherrypick {
         }
 
         public override void startup () {
-            Granite.init ();
             base.startup ();
 
             Intl.setlocale (LocaleCategory.ALL, "");
