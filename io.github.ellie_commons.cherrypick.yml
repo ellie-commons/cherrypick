@@ -1,6 +1,7 @@
 app-id: io.github.ellie_commons.cherrypick
 
 runtime: io.elementary.Platform
+# Currently this crashes for 8.2 (which flathub has) bc https://github.com/elementary/granite/pull/893
 runtime-version: '8'
 sdk: io.elementary.Sdk
 

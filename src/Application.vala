@@ -50,6 +50,8 @@ namespace Cherrypick {
 
         public override void startup () {
             base.startup ();
+            // Currently this crashes for 8.2 (which flathub has) bc https://github.com/elementary/granite/pull/893
+            // Granite.init ();
 
             Intl.setlocale (LocaleCategory.ALL, "");
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
