@@ -66,6 +66,14 @@ namespace Cherrypick {
                 );
             });
 
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("/io/github/ellie_commons/cherrypick/Application.css");
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (),
+                provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+
         }
 
         public override void activate () {
@@ -78,18 +86,10 @@ namespace Cherrypick {
 
             if (window == null) {
                 window = new Cherrypick.Window (this);
-
-                var provider = new Gtk.CssProvider ();
-                provider.load_from_resource ("/io/github/ellie_commons/cherrypick/Application.css");
-                    Gtk.StyleContext.add_provider_for_display (
-                        Gdk.Display.get_default (),
-                        provider,
-                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                    );
-                    window.show ();
+                window.show ();
 
             } else {
-                    window.present ();
+                window.present ();
             }
 
             /* Opens and immediately starts picking color if the --immediately-pick

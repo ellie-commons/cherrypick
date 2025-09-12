@@ -7,6 +7,12 @@
 
 namespace Cherrypick {
     public class Window : Gtk.Window {
+
+        private static GLib.Once<Cherrypick.Window> _instance;
+        public static unowned Cherrypick.Window instance (Application application) {
+            return _instance.once (() => { return new Cherrypick.Window (application); });
+        }
+
         private Gtk.Button pick_button;
         private Granite.Toast toast;
         private ColorPicker color_picker;
