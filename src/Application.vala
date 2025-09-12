@@ -24,20 +24,14 @@ namespace Cherrypick {
         private Window? window;
         private static bool is_immediately_pick = false;
 
-        private OptionEntry[] CMD_OPTION_ENTRIES = {
-            {"immediately-pick", 'p', OptionFlags.NONE, OptionArg.NONE, ref is_immediately_pick, _("Immediately pick a colour and copy it to clipboard"), null}
-        };
-
         public Application () {
             Object (
                 application_id: "io.github.ellie_commons.cherrypick",
-                flags: ApplicationFlags.FLAGS_NONE
+                flags: ApplicationFlags.HANDLES_COMMAND_LINE
             );
         }
 
         construct {
-            add_main_option_entries (CMD_OPTION_ENTRIES);
-
             var quit_action = new SimpleAction ("quit", null);
             add_action (quit_action);
             set_accels_for_action ("app.quit", {"<Control>q"});
@@ -101,9 +95,7 @@ namespace Cherrypick {
             /* Opens and immediately starts picking color if the --immediately-pick
                flag is passed when launching from the command line. This could
                be helpful for the user to set up keybindings and stuff */
-            if (Application.is_immediately_pick) {
-                immediately_pick ();
-            }
+            if (is_immediately_pick) { immediately_pick (); is_immediately_pick = false;};
         }
 
         // The initial plan was to have a function that skips using a UI entirely
@@ -128,5 +120,39 @@ namespace Cherrypick {
             this.send_notification ("notify.app", notification_end);  */
 
         }
+
+    public override int command_line (ApplicationCommandLine command_line) {
+        debug ("Parsing commandline arguments...");
+
+        OptionEntry[] CMD_OPTION_ENTRIES = {
+            {"immediately-pick", 'p', OptionFlags.NONE, OptionArg.NONE, ref is_immediately_pick, _("Immediately pick a colour and copy it to clipboard"), null}
+        };
+
+        // We have to make an extra copy of the array, since .parse assumes
+        // that it can remove strings from the array without freeing them.
+        string[] args = command_line.get_arguments ();
+        string[] _args = new string[args.length];
+        for (int i = 0; i < args.length; i++) {
+            _args[i] = args[i];
+        }
+
+        try {
+            var ctx = new OptionContext ();
+            ctx.set_help_enabled (true);
+            ctx.add_main_entries (CMD_OPTION_ENTRIES, null);
+            unowned string[] tmp = _args;
+            ctx.parse (ref tmp);
+
+        } catch (OptionError e) {
+            command_line.print ("error: %s\n", e.message);
+            return 0;
+        }
+
+        hold ();
+        activate ();
+        return 0;
+    }
+
+
     }
 }

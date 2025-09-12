@@ -51,6 +51,14 @@
   </screenshots>
 
   <releases>
+    <release date="2025-09-27" version="2.1.2">
+      <description>
+        <ul>
+          <li>Fix regression: Allow --immediately-pick when the window is already open</li>
+          <li>Not perfect: the crosshair doesnt show...</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-07-27" version="2.1.1">
       <description>
         <ul>
