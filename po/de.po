@@ -1,46 +1,42 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Language-Team: none\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2022-05-29 02:15+0530\n"
+"POT-Creation-Date: 2025-09-13 14:53+0200\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-26 23:17+0200\n"
-"PO-Revision-Date: 2022-05-29 02:15+0530\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. /TRANSLATORS: Do not translate app name
-#: src/Windows/Window.vala:29 src/Windows/Window.vala:52
+#: src/Windows/Window.vala:35
+#: src/Windows/Window.vala:58
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
-#: src/Windows/Window.vala:64
+#: src/Windows/Window.vala:70
 msgid "Format"
 msgstr "Format"
 
-#: src/Windows/Window.vala:73
+#: src/Windows/Window.vala:79
 msgid "History"
 msgstr "Verlauf"
 
-#: src/Windows/Window.vala:82
+#: src/Windows/Window.vala:88
 msgid "Pick Color"
 msgstr "Farbe wählen"
 
-#: src/Windows/Window.vala:84
-msgid ""
-"Allows you to click on a colour on the screen to get its code in the "
-"preferred format"
-msgstr ""
-"Ermöglicht es Ihnen, auf eine Farbe auf dem Bildschirm zu klicken, um ihren "
-"Code im bevorzugten Format zu erhalten"
+#: src/Windows/Window.vala:90
+msgid "Allows you to click on a colour on the screen to get its code in the preferred format"
+msgstr "Ermöglicht es Ihnen, auf eine Farbe auf dem Bildschirm zu klicken, um ihren Code im bevorzugten Format zu erhalten"
 
 #: src/Widgets/FormatArea.vala:64
 msgid "Click to paste a colour if you have one saved up"
-msgstr ""
-"Klicken Sie hier, um eine Farbe einzufügen, wenn Sie eine gespeichert haben"
+msgstr "Klicken Sie hier, um eine Farbe einzufügen, wenn Sie eine gespeichert haben"
 
 #: src/Widgets/FormatArea.vala:67
 msgid "Click to copy this colour to your clipboard"
@@ -58,6 +54,6 @@ msgstr "In die Zwischenablage kopiert!"
 msgid "Cannot detect colour!"
 msgstr "Kann keine Farbe erkennen!"
 
-#: src/Application.vala:28
+#: src/Application.vala:128
 msgid "Immediately pick a colour and copy it to clipboard"
-msgstr ""
+msgstr "Wählen Sie sofort eine Farbe aus und kopieren Sie sie in die Zwischenablage"

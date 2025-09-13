@@ -1,42 +1,38 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Language-Team: none\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2022-09-27 20:44+0900\n"
+"POT-Creation-Date: 2025-09-13 14:53+0200\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-26 23:17+0200\n"
-"PO-Revision-Date: 2022-09-27 20:44+0900\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: none\n"
-"Language: ru\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. /TRANSLATORS: Do not translate app name
-#: src/Windows/Window.vala:29 src/Windows/Window.vala:52
+#: src/Windows/Window.vala:35
+#: src/Windows/Window.vala:58
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
-#: src/Windows/Window.vala:64
+#: src/Windows/Window.vala:70
 msgid "Format"
 msgstr "Формат"
 
-#: src/Windows/Window.vala:73
+#: src/Windows/Window.vala:79
 msgid "History"
 msgstr "История"
 
-#: src/Windows/Window.vala:82
+#: src/Windows/Window.vala:88
 msgid "Pick Color"
 msgstr "Выбрать цвет"
 
-#: src/Windows/Window.vala:84
-msgid ""
-"Allows you to click on a colour on the screen to get its code in the "
-"preferred format"
-msgstr ""
-"Позволяет щелкнуть по цвету на экране, чтобы получить его код в "
-"предпочтительном формате"
+#: src/Windows/Window.vala:90
+msgid "Allows you to click on a colour on the screen to get its code in the preferred format"
+msgstr "Позволяет щелкнуть по цвету на экране, чтобы получить его код в предпочтительном формате"
 
 #: src/Widgets/FormatArea.vala:64
 msgid "Click to paste a colour if you have one saved up"
@@ -60,9 +56,9 @@ msgstr "Скопировано в буфер обмена"
 msgid "Cannot detect colour!"
 msgstr "Невозможно определить цвет!"
 
-#: src/Application.vala:28
+#: src/Application.vala:128
 msgid "Immediately pick a colour and copy it to clipboard"
-msgstr ""
+msgstr "Сразу же выберите цвет и скопируйте его в буфер обмена"
 
 #~ msgid "A simple color picker"
 #~ msgstr "Простая палитра цветов"
@@ -70,12 +66,8 @@ msgstr ""
 #~ msgid "Color;Pick;Eyedropper;Cherrypick;"
 #~ msgstr "Цвет;Выбрать;Пипетка;Выбор"
 
-#~ msgid ""
-#~ "A minimal color picker that lets you pick colors from anywhere on your "
-#~ "screen"
-#~ msgstr ""
-#~ "Минималистичная палитра, которая позволяет вам выбирать цвет с любой "
-#~ "точки вашего экрана"
+#~ msgid "A minimal color picker that lets you pick colors from anywhere on your screen"
+#~ msgstr "Минималистичная палитра, которая позволяет вам выбирать цвет с любой точки вашего экрана"
 
 #~ msgid "Features:"
 #~ msgstr "Функции:"
@@ -88,8 +80,7 @@ msgstr ""
 #~ msgstr "Запоминание вашего предпочитаемого формата"
 
 #~ msgid "Add command line flag to open directly in color picking mode"
-#~ msgstr ""
-#~ "Добавлен флаг командной строки для открытия сразу в режиме выбора цвета"
+#~ msgstr "Добавлен флаг командной строки для открытия сразу в режиме выбора цвета"
 
 #~ msgid "Fix layout bug when opening multiple instances"
 #~ msgstr "Исправлен баг интерфейса при открытии нескольких окон"
