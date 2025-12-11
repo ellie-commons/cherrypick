@@ -31,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ellie-commons/cherrypick.git
-        tag: 2.1.1
-        commit: 1fc6419b5f654d0d5b5e59d96dab8b771d7fd31b
+        tag: 2.1.3
+        commit: 2b4633d0b822e8165bb3703d9745cf9679f4b09c
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
