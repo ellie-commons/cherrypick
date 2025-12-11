@@ -1,4 +1,6 @@
-project('io.github.ellie_commons.cherrypick', 'c', 'vala', version: '2.1.2')
+project('io.github.ellie_commons.cherrypick', 
+'c', 'vala', 
+version: '2.1.3')
 
 subdir('src')
 subdir('data')
