@@ -38,15 +38,22 @@
   <screenshots>
     <screenshot type="default">
       <caption>Cherrypick's main window</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/cherrypick/@version@/data/screenshots/window-light.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/cherrypick/refs/tags/@version@/data/screenshots/window-light.png</image>
     </screenshot>
     <screenshot>
       <caption>Main window with dark theme</caption>
-      <image>https://raw.githubusercontent.com/ellie-commons/cherrypick/@version@/data/screenshots/window-dark.png</image>
+      <image>https://raw.githubusercontent.com/ellie-commons/cherrypick/refs/tags/@version@/data/screenshots/window-dark.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release date="2025-12-20" version="2.1.6">
+      <description>
+        <ul>
+          <li>fix screenshot</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-12-20" version="2.1.5">
       <description>
         <ul>
