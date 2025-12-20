@@ -1,4 +1,4 @@
-id: io.github.ellie_commons.cherrypick
+app-id: io.github.ellie_commons.cherrypick
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
@@ -31,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ellie-commons/cherrypick.git
-        tag: 2.1.3
-        commit: 2b4633d0b822e8165bb3703d9745cf9679f4b09c
+        tag: 2.1.4
+        commit: 172c4377e098bc3b06fce24321537c5360e2951f
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'

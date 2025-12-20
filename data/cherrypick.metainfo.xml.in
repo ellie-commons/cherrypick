@@ -38,19 +38,23 @@
   <screenshots>
     <screenshot type="default">
       <caption>Cherrypick's main window</caption>
-      <image>
-        https://github.com/ellie-commons/cherrypick/blob/main/data/screenshots/window-light.png?raw=true
-      </image>
+      <image>https://raw.githubusercontent.com/ellie-commons/cherrypick/@version@/data/screenshots/window-light.png</image>
     </screenshot>
     <screenshot>
       <caption>Main window with dark theme</caption>
-      <image>
-        https://github.com/ellie-commons/cherrypick/blob/main/data/screenshots/window-dark.png?raw=true
-      </image>
+      <image>https://raw.githubusercontent.com/ellie-commons/cherrypick/@version@/data/screenshots/window-dark.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release date="2025-12-20" version="2.1.5">
+      <description>
+        <ul>
+          <li>Force elementary stylesheet to fix issues</li>
+          <li>It is cherry</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-12-11" version="2.1.4">
       <description>
         <ul>

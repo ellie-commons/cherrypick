@@ -44,8 +44,8 @@ namespace Cherrypick {
 
         public override void startup () {
             base.startup ();
-            // Currently this crashes for 8.2 (which flathub has) bc https://github.com/elementary/granite/pull/893
-            // Granite.init ();
+            Gtk.init ();
+            Granite.init ();
 
             Intl.setlocale (LocaleCategory.ALL, "");
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -55,6 +55,8 @@ namespace Cherrypick {
 
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
+            gtk_settings.gtk_icon_theme_name = "elementary";
+            gtk_settings.gtk_theme_name = "io.elementary.stylesheet.strawberry";
 
             gtk_settings.gtk_application_prefer_dark_theme = (
                                                             granite_settings.prefers_color_scheme == DARK
