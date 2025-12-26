@@ -10,10 +10,9 @@
 */
 class Cherrypick.MainView: Gtk.Box {
 
-    private Gtk.Button pick_button;
     private Granite.Toast toast;
     private ColorPicker color_picker;
-    private Cherrypick.FormatArea format_area;
+    public Gtk.Button pick_button;
 
     construct {
         // We use a lot of margin_top for each subelement
@@ -38,7 +37,7 @@ class Cherrypick.MainView: Gtk.Box {
             margin_top = 6
         };
         format_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-        format_area = new Cherrypick.FormatArea ();
+        var format_area = new Cherrypick.FormatArea ();
 
 
         /* ---------------- HISTORY ---------------- */
@@ -80,12 +79,6 @@ class Cherrypick.MainView: Gtk.Box {
 
         color_picker.picked.connect (format_area.copy_to_clipboard);
         pick_button.clicked.connect (on_pick);
-
-
-        /* when the app is opened the user probably wants to pick the color
-            straight away. So setting the pick button as focused default
-            action so that pressing Return or Space starts the pick */
-        pick_button.grab_focus ();
     }
 
     private void on_message (string message) {

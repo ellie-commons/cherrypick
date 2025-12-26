@@ -57,7 +57,6 @@ public class Cherrypick.Window : Gtk.Window {
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         //headerbar.pack_start (new Gtk.WindowControls (Gtk.PackType.START));
 
-
         vbox = new Cherrypick.MainView ();
 
 
@@ -77,7 +76,10 @@ public class Cherrypick.Window : Gtk.Window {
 
         child = window_handle;
 
-
+        /* when the app is opened the user probably wants to pick the color
+            straight away. So setting the pick button as focused default
+            action so that pressing Return or Space starts the pick */
+        set_focus (vbox.pick_button);
     }
 
     public void on_pick () {
