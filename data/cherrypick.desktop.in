@@ -13,6 +13,6 @@ Keywords=Color;Pick;Eyedropper;Picker;
 Actions=ImmediatelyPick;
 
 [Desktop Action ImmediatelyPick]
-Name=Immediately pick a color
+Name=Pick a color
 Icon=color-picker
 Exec=io.github.ellie_commons.cherrypick --immediately-pick

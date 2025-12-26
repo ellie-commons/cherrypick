@@ -14,19 +14,16 @@ namespace Cherrypick {
 
         public string to_hex_string () {
             var hex_string = "#%02x%02x%02x".printf (red, green, blue).up ();
-
             return hex_string;
         }
 
         public string to_rgba_string () {
             var rgba_string = "rgba(%d, %d, %d, %s)".printf (red, green, blue, alpha.to_string ());
-
             return rgba_string;
         }
 
         public string to_rgb_string () {
             var rgb_string = "rgb(%d, %d, %d)".printf (red, green, blue);
-
             return rgb_string;
         }
 
@@ -92,14 +89,14 @@ namespace Cherrypick {
             s = (s * 100.0).abs ();
             l = (l * 100.0).abs ();
 
-            var hsl_string = "hsl(%d, %d, %d)".printf ((int)h, (int)s, (int)l);
+            var hsl_string = "hsl(%d, %d, %d)".printf ((uint8)h, (uint8)s, (uint8)l);
 
             return hsl_string;
             }
 
         public string to_hsla_string () {
             var hsla_string = this.to_hsl_string ();
-            hsla_string = hsla_string.replace (")", ", " + ((int)alpha).to_string () + ")");
+            hsla_string = hsla_string.replace (")", ", %s)".printf (alpha.to_string ()));
             hsla_string = hsla_string.replace ("hsl", "hsla");
 
             return hsla_string;

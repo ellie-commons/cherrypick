@@ -18,6 +18,7 @@ class Cherrypick.HistoryHeader: Granite.Bin {
         };
         history_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
+        /* -------- END WIDGET -------- */
         var right_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
         var history_save = new Gtk.Button.from_icon_name ("document-save-symbolic") {
@@ -30,15 +31,15 @@ class Cherrypick.HistoryHeader: Granite.Bin {
         };
         history_restore.add_css_class (Granite.STYLE_CLASS_FLAT);
 
-
         right_buttons.append (history_save);
         right_buttons.append (history_restore);
 
+
+        /* -------- PARENT WIDGET -------- */
         centerbox.start_widget = history_label;
         centerbox.end_widget = right_buttons;
 
         child = centerbox;
-
 
 
         var settings = Settings.get_instance ();

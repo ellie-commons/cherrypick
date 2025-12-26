@@ -16,20 +16,13 @@ namespace Cherrypick {
 
         public string to_string () {
             switch (this) {
-                case HEX:
-                    return "HEX";
-                case RGB:
-                    return "RGB";
-                case RGBA:
-                    return "RGBA";
-                case CMYK:
-                    return "CMYK";
-                case HSL:
-                    return "HSL";
-                case HSLA:
-                    return "HSLA";
-                default:
-                    assert_not_reached ();
+                case HEX: return "HEX";
+                case RGB: return "RGB";
+                case RGBA: return "RGBA";
+                case CMYK: return "CMYK";
+                case HSL: return "HSL";
+                case HSLA: return "HSLA";
+                default: assert_not_reached ();
             }
         }
 
