@@ -1,59 +1,75 @@
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: fr\n"
-"Language-Team: none\n"
-"Last-Translator: Automatically generated\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: 2022-05-29 02:15+0530\n"
-"POT-Creation-Date: 2025-09-13 14:53+0200\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-26 14:52+0100\n"
+"PO-Revision-Date: 2022-05-29 02:15+0530\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. /TRANSLATORS: Do not translate app name
-#: src/Windows/Window.vala:35
-#: src/Windows/Window.vala:58
+#: src/Windows/Window.vala:31 src/Windows/Window.vala:51
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
-#: src/Windows/Window.vala:70
-msgid "Format"
-msgstr "Format"
-
-#: src/Windows/Window.vala:79
-msgid "History"
-msgstr "Historique"
-
-#: src/Windows/Window.vala:88
-msgid "Pick Color"
-msgstr "Choisir une couleur"
-
-#: src/Windows/Window.vala:90
-msgid "Allows you to click on a colour on the screen to get its code in the preferred format"
-msgstr "Permet de cliquer sur une couleur à l'écran pour obtenir son code dans le format souhaité."
-
-#: src/Widgets/FormatArea.vala:64
+#: src/Widgets/FormatArea.vala:66
 msgid "Click to paste a colour if you have one saved up"
 msgstr "Cliquez pour coller une couleur si vous en avez une de sauvegardée"
 
-#: src/Widgets/FormatArea.vala:67
+#: src/Widgets/FormatArea.vala:69
 msgid "Click to copy this colour to your clipboard"
 msgstr "Cliquez pour copier cette couleur dans votre presse-papiers"
 
-#: src/Widgets/FormatArea.vala:73
+#: src/Widgets/FormatArea.vala:75
 msgid "Choose your preferred format to display picked colours"
-msgstr "Choisissez votre format préféré pour afficher les couleurs sélectionnées"
+msgstr ""
+"Choisissez votre format préféré pour afficher les couleurs sélectionnées"
 
-#: src/Widgets/FormatArea.vala:121
+#: src/Widgets/FormatArea.vala:109
 msgid "Copied to clipboard!"
 msgstr "Copié dans le presse-papiers !"
 
-#: src/Widgets/FormatArea.vala:150
+#: src/Widgets/FormatArea.vala:138
 msgid "Cannot detect colour!"
 msgstr "Impossible de détecter la couleur !"
 
-#: src/Application.vala:128
-msgid "Immediately pick a colour and copy it to clipboard"
-msgstr "Choisissez immédiatement une couleur et copiez-la dans le presse-papiers."
+#: src/Widgets/HistoryHeader.vala:19
+msgid "History"
+msgstr "Historique"
+
+#: src/Widgets/HistoryHeader.vala:28
+msgid "Save a snapshot of current color history"
+msgstr ""
+
+#: src/Widgets/HistoryHeader.vala:33
+msgid "Restore history snapshot"
+msgstr ""
+
+#: src/Widgets/HistoryHeader.vala:53
+#, fuzzy
+msgid "History saved"
+msgstr "Historique"
+
+#: src/Application.vala:129
+#, fuzzy
+msgid "Pick a colour and copy it to clipboard"
+msgstr ""
+"Choisissez immédiatement une couleur et copiez-la dans le presse-papiers."
+
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgid "Pick Color"
+#~ msgstr "Choisir une couleur"
+
+#~ msgid ""
+#~ "Allows you to click on a colour on the screen to get its code in the "
+#~ "preferred format"
+#~ msgstr ""
+#~ "Permet de cliquer sur une couleur à l'écran pour obtenir son code dans le "
+#~ "format souhaité."

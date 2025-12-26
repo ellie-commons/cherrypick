@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-13 14:53+0200\n"
+"POT-Creation-Date: 2025-12-26 14:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,48 +18,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. /TRANSLATORS: Do not translate app name
-#: src/Windows/Window.vala:35 src/Windows/Window.vala:58
+#: src/Windows/Window.vala:31 src/Windows/Window.vala:51
 msgid "Cherrypick"
 msgstr ""
 
-#: src/Windows/Window.vala:70
-msgid "Format"
-msgstr ""
-
-#: src/Windows/Window.vala:79
-msgid "History"
-msgstr ""
-
-#: src/Windows/Window.vala:88
-msgid "Pick Color"
-msgstr ""
-
-#: src/Windows/Window.vala:90
-msgid ""
-"Allows you to click on a colour on the screen to get its code in the "
-"preferred format"
-msgstr ""
-
-#: src/Widgets/FormatArea.vala:64
+#: src/Widgets/FormatArea.vala:66
 msgid "Click to paste a colour if you have one saved up"
 msgstr ""
 
-#: src/Widgets/FormatArea.vala:67
+#: src/Widgets/FormatArea.vala:69
 msgid "Click to copy this colour to your clipboard"
 msgstr ""
 
-#: src/Widgets/FormatArea.vala:73
+#: src/Widgets/FormatArea.vala:75
 msgid "Choose your preferred format to display picked colours"
 msgstr ""
 
-#: src/Widgets/FormatArea.vala:121
+#: src/Widgets/FormatArea.vala:109
 msgid "Copied to clipboard!"
 msgstr ""
 
-#: src/Widgets/FormatArea.vala:150
+#: src/Widgets/FormatArea.vala:138
 msgid "Cannot detect colour!"
 msgstr ""
 
-#: src/Application.vala:128
-msgid "Immediately pick a colour and copy it to clipboard"
+#: src/Widgets/HistoryHeader.vala:19
+msgid "History"
+msgstr ""
+
+#: src/Widgets/HistoryHeader.vala:28
+msgid "Save a snapshot of current color history"
+msgstr ""
+
+#: src/Widgets/HistoryHeader.vala:33
+msgid "Restore history snapshot"
+msgstr ""
+
+#: src/Widgets/HistoryHeader.vala:53
+msgid "History saved"
+msgstr ""
+
+#: src/Application.vala:129
+msgid "Pick a colour and copy it to clipboard"
 msgstr ""

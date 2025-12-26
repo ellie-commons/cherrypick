@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-13 14:53+0200\n"
+"POT-Creation-Date: 2025-12-26 14:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "Color;Pick;Eyedropper;Picker;"
 msgstr ""
 
 #: data/cherrypick.desktop.in:17
-msgid "Immediately pick a color"
+msgid "Pick a color"
 msgstr ""
 
 #: data/cherrypick.metainfo.xml.in:5
@@ -82,122 +82,150 @@ msgstr ""
 msgid "Main window with dark theme"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:57
+#: data/cherrypick.metainfo.xml.in:62
+msgid "Allow saving and restoring snapshots"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:63
+msgid "Change branding colors to a nice cherry"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:73 data/cherrypick.metainfo.xml.in:80
+msgid "fix screenshot"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:87
+msgid "Force elementary stylesheet to fix issues"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:88
+msgid "It is cherry"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:95
+msgid "Linting cleanup"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:102
+msgid "Version bump for flathub release"
+msgstr ""
+
+#: data/cherrypick.metainfo.xml.in:109
 msgid ""
 "Fix regression: Allow --immediately-pick when the window is already open"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:58
+#: data/cherrypick.metainfo.xml.in:110
 msgid "Not sure how to fix yet: the crosshair doesnt show..."
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:65
+#: data/cherrypick.metainfo.xml.in:117
 msgid "Clean appdata for flathub release"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:66
+#: data/cherrypick.metainfo.xml.in:118
 msgid "Make sure the app doesnt crash at startup for flathub builds"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:73
+#: data/cherrypick.metainfo.xml.in:125
 msgid "App now works on ARM thanks to @ryonakano!"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:74
+#: data/cherrypick.metainfo.xml.in:126
 msgid "Add the ability to immediately pick and copy to clipboard"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:75
+#: data/cherrypick.metainfo.xml.in:127
 msgid "You can right-click on app icon and choose \"Immediately pick\""
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:76
+#: data/cherrypick.metainfo.xml.in:128
 msgid ""
 "Or set a keybind to \"flatpak run io.ellie_commons.cherrypick --immediately-"
 "pick\""
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:77
+#: data/cherrypick.metainfo.xml.in:129
 msgid "Updated deprecated widgets"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:78
+#: data/cherrypick.metainfo.xml.in:130
 msgid "Minute tweaks by @ryonakano thanks again!"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:83
+#: data/cherrypick.metainfo.xml.in:136
 msgid "Remove minor artifacts"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:89
+#: data/cherrypick.metainfo.xml.in:141
 msgid "2.0.0: The revival!"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:91
+#: data/cherrypick.metainfo.xml.in:143
 msgid ""
 "A new name, Cherrypick! Blessed by @adithyankv, the OG author. Thank you!"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:92
+#: data/cherrypick.metainfo.xml.in:144
 msgid ""
 "Port to modern tech (GTK4, Wayland, portals, elementary 8). Not broken "
 "anymore!"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:93
+#: data/cherrypick.metainfo.xml.in:145
 msgid "CMYK model available thanks to @DSLitvinov"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:94
+#: data/cherrypick.metainfo.xml.in:146
 msgid "HSL model available thanks to @ckruse's work on ColorMate"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:95
+#: data/cherrypick.metainfo.xml.in:147
 msgid "Also apparently HSLA is a thing so i added it"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:96
+#: data/cherrypick.metainfo.xml.in:148
 msgid "New feature: You can now paste a color from clipboard to preview it"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:97
+#: data/cherrypick.metainfo.xml.in:149
 msgid ""
 "New feature: Hover over history buttons to see their code in your preferred "
 "format"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:102
+#: data/cherrypick.metainfo.xml.in:155
 msgid "Add command line flag to open directly in color picking mode"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:109
+#: data/cherrypick.metainfo.xml.in:161
 msgid "Fix layout bug when opening multiple instances"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:110
+#: data/cherrypick.metainfo.xml.in:162
 msgid "Make pick color button the default focused widget"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:111
+#: data/cherrypick.metainfo.xml.in:163
 msgid "Remove payment option from appcenter"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:118
+#: data/cherrypick.metainfo.xml.in:170
 msgid "Update to elementary platform 7"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:119
+#: data/cherrypick.metainfo.xml.in:171
 msgid "Minor change to app description"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:125
+#: data/cherrypick.metainfo.xml.in:177
 msgid "Fix inaccuracies in metadata"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:130
+#: data/cherrypick.metainfo.xml.in:182
 msgid "Add stripe key"
 msgstr ""
 
-#: data/cherrypick.metainfo.xml.in:135
+#: data/cherrypick.metainfo.xml.in:187
 msgid "Initial release"
 msgstr ""
