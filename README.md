@@ -16,6 +16,9 @@ Cherrypick is designed and developed primarily for [elementary OS]. The latest s
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.cherrypick) 
 
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.cherrypick)
+
+
 
 ## 💝 Donations
 
@@ -49,6 +52,7 @@ Then follow the elementary OS instructions
 
 ## Credits
 - Directly inspired by and uses some code from the now unmaintained [ColorPicker](https://github.com/RonnyDo/ColorPicker)
+- CMYK support by @DSLitvinov
 - [Palette](https://github.com/cassidyjames/palette) for code reference
 - [Harvey](https://github.com/danrabbit/harvey) for code reference and design inspiration.
 - [Codecard](https://github.com/manexim/codecard) for code reference.
