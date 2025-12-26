@@ -61,6 +61,7 @@
         <ul>
           <li>Allow saving and restoring snapshots</li>
           <li>Change branding colors to a nice cherry</li>
+          <li>All a glance: Preview tooltip shows all formats</li>
         </ul>
       </description>
       <issues>

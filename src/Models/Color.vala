@@ -118,9 +118,7 @@ public class Cherrypick.Color : Object {
         alpha = rgba.alpha;
     }
 
-    public string to_preferred_string () {
-        var settings = Settings.get_instance ();
-        var format = settings.get_enum ("color-format");
+    public string to_format_string (Format format) {
         switch (format) {
             case Format.HEX: return this.to_hex_string ();
             case Format.RGB: return this.to_rgb_string ();
@@ -130,5 +128,11 @@ public class Cherrypick.Color : Object {
             case Format.HSLA: return this.to_hsla_string ();
             default: return this.to_rgba_string ();
         }
+    }
+
+    public string to_preferred_string () {
+        var settings = Settings.get_instance ();
+        var format = settings.get_enum ("color-format");
+        return to_format_string (format);
     }
 }
