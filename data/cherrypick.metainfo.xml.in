@@ -56,6 +56,17 @@
     </branding>
 
   <releases>
+    <release version="2.2.0" date="2025-12-25">
+      <description>
+        <ul>
+          <li>Allow saving and restoring snapshots</li>
+          <li>Change branding colors to a nice cherry</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/ellie-commons/cherrypick/issues/21">Fix alpha not being restored properly</issue>
+      </issues>
+    </release>
     <release date="2025-12-20" version="2.1.7">
       <description>
         <ul>
