@@ -3,7 +3,7 @@ Type=Application
 Version=1.5
 Name=Cherrypick
 GenericName=Color Picker
-Comment=Pick any color
+Comment=Pick colors on your screen
 Categories=Graphics;Utility;
 
 Icon=io.github.ellie_commons.cherrypick
