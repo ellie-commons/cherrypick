@@ -1,26 +1,26 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Language-Team: none\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2022-05-29 02:15+0530\n"
+"POT-Creation-Date: 2025-12-26 14:52+0100\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 14:52+0100\n"
-"PO-Revision-Date: 2022-05-29 02:15+0530\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. /TRANSLATORS: Do not translate app name
-#: src/Windows/Window.vala:31 src/Windows/Window.vala:51
+#: src/Windows/Window.vala:31
+#: src/Windows/Window.vala:51
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
 #: src/Widgets/FormatArea.vala:66
 msgid "Click to paste a colour if you have one saved up"
-msgstr ""
-"Klicken Sie hier, um eine Farbe einzufügen, wenn Sie eine gespeichert haben"
+msgstr "Klicken Sie hier, um eine Farbe einzufügen, wenn Sie eine gespeichert haben"
 
 #: src/Widgets/FormatArea.vala:69
 msgid "Click to copy this colour to your clipboard"
@@ -44,32 +44,16 @@ msgstr "Verlauf"
 
 #: src/Widgets/HistoryHeader.vala:28
 msgid "Save a snapshot of current color history"
-msgstr ""
+msgstr "Speichern eines Schnappschusses des aktuellen Farbverlaufs"
 
 #: src/Widgets/HistoryHeader.vala:33
 msgid "Restore history snapshot"
-msgstr ""
+msgstr "Schnappschuss der Historie wiederherstellen"
 
 #: src/Widgets/HistoryHeader.vala:53
-#, fuzzy
 msgid "History saved"
-msgstr "Verlauf"
+msgstr "Verlauf gespeichert"
 
 #: src/Application.vala:129
-#, fuzzy
 msgid "Pick a colour and copy it to clipboard"
-msgstr ""
-"Wählen Sie sofort eine Farbe aus und kopieren Sie sie in die Zwischenablage"
-
-#~ msgid "Format"
-#~ msgstr "Format"
-
-#~ msgid "Pick Color"
-#~ msgstr "Farbe wählen"
-
-#~ msgid ""
-#~ "Allows you to click on a colour on the screen to get its code in the "
-#~ "preferred format"
-#~ msgstr ""
-#~ "Ermöglicht es Ihnen, auf eine Farbe auf dem Bildschirm zu klicken, um "
-#~ "ihren Code im bevorzugten Format zu erhalten"
+msgstr "Eine Farbe auswählen und in die Zwischenablage kopieren"
