@@ -69,7 +69,7 @@ namespace Cherrypick {
 
             var format_label = new Gtk.Label (_("Format")) {
                 xalign = 0f,
-                margin_top = 8
+                margin_top = 6
             };
             format_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
 
@@ -95,10 +95,11 @@ namespace Cherrypick {
             pick_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
 
-            var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 10) {
+            var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
                 vexpand = true,
                 valign = Gtk.Align.START,
-                margin_start = margin_bottom = margin_end = 10,
+                margin_start = 6,
+                margin_bottom = margin_end = 12,
                 margin_top = 0
             };
 

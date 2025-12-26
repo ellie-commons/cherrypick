@@ -42,10 +42,10 @@ namespace Cherrypick {
 
         public void load_history_from_gsettings () {
             var settings = Settings.get_instance ();
-            var color_history_hex_codes = settings.get_strv ("color-history");
-            foreach (var hex_code in color_history_hex_codes) {
+            var color_history_rgba_codes = settings.get_strv ("color-history");
+            foreach (var rgba_code in color_history_rgba_codes) {
                 var color = new Color ();
-                color.parse (hex_code);
+                color.parse (rgba_code);
                 color_history.append (color);
             }
             last_picked_color = color_history[color_history.size - 1];
@@ -53,11 +53,11 @@ namespace Cherrypick {
 
         public void save_history_to_gsettings () {
             var settings = Settings.get_instance ();
-            var hex_codes = new string[color_history.size];
+            var rgba_codes = new string[color_history.size];
             for (int i = 0; i < color_history.size; i++) {
-                hex_codes[i] = color_history[i].to_hex_string ();
+                rgba_codes[i] = color_history[i].to_rgba_string ();
             }
-            settings.set_strv ("color-history", hex_codes);
+            settings.set_strv ("color-history", rgba_codes);
         }
     }
 }

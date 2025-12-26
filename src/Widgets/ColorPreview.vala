@@ -62,7 +62,7 @@ namespace Cherrypick {
         }
 
         private void set_color (Color color) {
-            var color_css = color_definition.printf (color.to_hex_string ());
+            var color_css = color_definition.printf (color.to_rgba_string ());
             css_provider.load_from_string (color_css);
 
             Gtk.StyleContext.add_provider_for_display (

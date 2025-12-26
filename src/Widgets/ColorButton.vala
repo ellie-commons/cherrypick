@@ -42,7 +42,7 @@ namespace Cherrypick {
         public void update_color (Color newcolor) {
                 remove_css_class (css_name);
                 color = newcolor;
-                var css = BUTTON_CSS.printf (css_name, newcolor.to_hex_string ());
+                var css = BUTTON_CSS.printf (css_name, newcolor.to_rgba_string ());
                 css_provider.load_from_string (css);
 
                 Gtk.StyleContext.add_provider_for_display (

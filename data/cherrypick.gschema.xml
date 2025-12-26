@@ -12,18 +12,18 @@
   <schema path="/io/github/ellie_commons/cherrypick/" id="io.github.ellie_commons.cherrypick">
     <key name="color-history" type="as">
       <!-- Setting default to some of the colors from elementary palette -->
-      <default>["#ed5353", "#f37329", "#f9c440", "#9bdb4d", "#a56de2"]</default>
+      <default>["rgba(237, 83, 83, 1)", "rgba(243, 115, 41, 1)", "rgba(249, 196, 64, 1)", "rgba(155, 219, 77, 1)", "rgba(165, 109, 226, 1)"]</default>
       <summary>Color history</summary>
-      <description>The hex values for last selected colors</description>
+      <description>The rgba values for last selected colors</description>
     </key>
     <key name="color-snapshot" type="as">
       <!-- Setting default to some of the colors from elementary palette -->
-      <default>["#ed5353", "#f37329", "#f9c440", "#9bdb4d", "#a56de2"]</default>
+      <default>["rgba(237, 83, 83, 1)", "rgba(243, 115, 41, 1)", "rgba(249, 196, 64, 1)", "rgba(155, 219, 77, 1)", "rgba(165, 109, 226, 1)"]</default>
       <summary>Color history</summary>
-      <description>The hex values for last selected colors</description>
+      <description>The rgba values for saved snapshot</description>
     </key>
     <key name="color-format" enum="io.github.ellie_commons.cherrypick.format">
-      <default>"hex"</default>
+      <default>"rgba"</default>
       <summary>Color format</summary>
       <description>Last selected color format</description>
     </key>
