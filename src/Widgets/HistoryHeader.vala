@@ -7,7 +7,7 @@
 
 class Cherrypick.HistoryHeader: Granite.Bin {
 
-    public signal void saved ();
+    public signal void saved (string message);
 
     construct {
         /* -------- START WIDGET -------- */
@@ -47,7 +47,7 @@ class Cherrypick.HistoryHeader: Granite.Bin {
         history_save.clicked.connect (() => {
             var snapshot = settings.get_strv ("color-history");
             settings.set_strv ("color-snapshot", snapshot);
-            saved ();
+            saved (_("History saved"));
         ;});
 
         history_restore.clicked.connect (() => {
