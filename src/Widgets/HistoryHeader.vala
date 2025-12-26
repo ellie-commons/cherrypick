@@ -22,7 +22,7 @@ class Cherrypick.HistoryHeader: Granite.Bin {
         var right_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
         var history_save = new Gtk.Button.from_icon_name ("document-save-symbolic") {
-            tooltip_text = _("save a snapshot of current color history")
+            tooltip_text = _("Save a snapshot of current color history")
         };
         history_save.add_css_class (Granite.STYLE_CLASS_FLAT);
 

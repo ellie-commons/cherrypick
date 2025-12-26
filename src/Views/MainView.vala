@@ -5,63 +5,16 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-public class Cherrypick.Window : Gtk.Window {
-
-    private static GLib.Once<Cherrypick.Window> _instance;
-    public static unowned Cherrypick.Window instance (Application application) {
-        return _instance.once (() => { return new Cherrypick.Window (application);});
-    }
+class Cherrypick.MainView: Gtk.Box {
 
     private Gtk.Button pick_button;
     private Granite.Toast toast;
     private ColorPicker color_picker;
     public Cherrypick.FormatArea format_area;
 
-    public SimpleActionGroup actions { get; construct; }
-    public const string ACTION_PREFIX = "app.";
-    public const string ACTION_PICK = "pick";
-
-    public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
-
-    private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_PICK, on_pick }
-    };
-
-    public Window (Gtk.Application app) {
-        Object (
-            application: app,
-            ///TRANSLATORS: Do not translate app name
-            title: _("Cherrypick"),
-            default_width: 480,
-            default_height: 240,
-            resizable: false
-        );
-    }
-
     construct {
-        Intl.setlocale ();
-
-        var actions = new SimpleActionGroup ();
-        actions.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("app", actions);
-
-        // We need to hide the title area for the split headerbar
-        var null_title = new Gtk.Grid () {
-            visible = false
-        };
-        set_titlebar (null_title);
-
         toast = new Granite.Toast ("");
         toast.hide ();
-
-        var titlelabel = new Gtk.Label (_("Cherrypick"));
-        titlelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-
-        var headerbar = new Gtk.HeaderBar () {
-            title_widget = titlelabel
-        };
-        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
-        //headerbar.pack_start (new Gtk.WindowControls (Gtk.PackType.START));
 
         var color_preview = new Cherrypick.ColorPreview ();
 
@@ -107,21 +60,7 @@ public class Cherrypick.Window : Gtk.Window {
         toast = new Granite.Toast ("");
         overlay.add_overlay (toast);
 
-        /* We want the color preview area to span the entire height of the
-            window, so using a custom grid layout for the entire window
-            including the headerbar */
-        var window_grid = new Gtk.Grid ();
-        window_grid.attach (headerbar, 0, 0);
-        window_grid.attach (vbox, 0, 1);
-        window_grid.attach (color_preview, 1, 0, 1, 2);
 
-        /* As the headerbar spans only half the window, it would be
-            more convenient to be able to move the window from anywhere */
-        var window_handle = new Gtk.WindowHandle () {
-            child = window_grid
-        };
-
-        child = window_handle;
 
         color_picker = new ColorPicker ();
 
@@ -143,8 +82,6 @@ public class Cherrypick.Window : Gtk.Window {
 
         pick_button.clicked.connect (on_pick);
         color_picker.picked.connect (format_area.copy_to_clipboard);
-
-
         /* when the app is opened the user probably wants to pick the color
             straight away. So setting the pick button as focused default
             action so that pressing Return or Space starts the pick */
