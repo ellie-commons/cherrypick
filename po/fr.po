@@ -1,20 +1,21 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fr\n"
+"Language-Team: none\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2022-05-29 02:15+0530\n"
+"POT-Creation-Date: 2025-12-26 17:04+0100\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 17:04+0100\n"
-"PO-Revision-Date: 2022-05-29 02:15+0530\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: fr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. /TRANSLATORS: Do not translate app name
 #. We need to hide the title area for the split headerbar
-#: src/Windows/Window.vala:31 src/Windows/Window.vala:48
+#: src/Windows/Window.vala:31
+#: src/Windows/Window.vala:48
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
@@ -28,8 +29,7 @@ msgstr "Cliquez pour copier cette couleur dans votre presse-papiers"
 
 #: src/Widgets/FormatArea.vala:75
 msgid "Choose your preferred format to display picked colours"
-msgstr ""
-"Choisissez votre format préféré pour afficher les couleurs sélectionnées"
+msgstr "Choisissez votre format préféré pour afficher les couleurs sélectionnées"
 
 #: src/Widgets/FormatArea.vala:109
 msgid "Copied to clipboard!"

@@ -1,18 +1,19 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Language-Team: none\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2022-05-29 02:15+0530\n"
+"POT-Creation-Date: 2025-12-26 17:04+0100\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: io.github.ellie_commons.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 17:04+0100\n"
-"PO-Revision-Date: 2022-05-29 02:15+0530\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/cherrypick.desktop.in:5 data/cherrypick.metainfo.xml.in:4
+#: data/cherrypick.desktop.in:5
+#: data/cherrypick.metainfo.xml.in:4
 msgid "Cherrypick"
 msgstr "Cherrypick"
 
@@ -20,10 +21,10 @@ msgstr "Cherrypick"
 msgid "Color Picker"
 msgstr "Farbwähler"
 
-#: data/cherrypick.desktop.in:7 data/cherrypick.metainfo.xml.in:5
-#, fuzzy
+#: data/cherrypick.desktop.in:7
+#: data/cherrypick.metainfo.xml.in:5
 msgid "Pick colors on your screen"
-msgstr "Auswahl von Pixelfarben auf Ihrem Bildschirm"
+msgstr "Farben auf Ihrem Bildschirm auswählen"
 
 #: data/cherrypick.desktop.in:14
 msgid "Color;Pick;Eyedropper;Picker;"
@@ -43,31 +44,23 @@ msgstr "Merkmale:"
 
 #: data/cherrypick.metainfo.xml.in:14
 msgid "Choose different output formats (RGB, RGBA, HEX, CMYK, HSL, HSLA)"
-msgstr ""
-"Wählen Sie verschiedene Ausgabeformate (RGB, RGBA, HEX, CMYK, HSL, HSLA)"
+msgstr "Wählen Sie verschiedene Ausgabeformate (RGB, RGBA, HEX, CMYK, HSL, HSLA)"
 
 #: data/cherrypick.metainfo.xml.in:15
 msgid "Remembers your preferred format"
 msgstr "Erinnert sich an Ihr bevorzugtes Format"
 
 #: data/cherrypick.metainfo.xml.in:16
-msgid ""
-"Color history remembers your last picked colors (hover to check their code)"
-msgstr ""
-"Der Farbverlauf speichert Ihre zuletzt gewählten Farben (bewegen Sie den "
-"Mauszeiger, um ihren Code zu überprüfen)"
+msgid "Color history remembers your last picked colors (hover to check their code)"
+msgstr "Der Farbverlauf speichert Ihre zuletzt gewählten Farben (bewegen Sie den Mauszeiger, um ihren Code zu überprüfen)"
 
 #: data/cherrypick.metainfo.xml.in:17
 msgid "Curious about a color? Copy paste it from your clipboard to preview it"
-msgstr ""
-"Neugierig auf eine Farbe? Kopieren und Einfügen aus der Zwischenablage für "
-"eine Vorschau"
+msgstr "Neugierig auf eine Farbe? Kopieren und Einfügen aus der Zwischenablage für eine Vorschau"
 
 #: data/cherrypick.metainfo.xml.in:18
 msgid "You can set a keybind to immediately pick and copy to clipboard!"
-msgstr ""
-"Sie können eine Tastenkombination festlegen, um sofort zu wählen und in die "
-"Zwischenablage zu kopieren!"
+msgstr "Sie können eine Tastenkombination festlegen, um sofort zu wählen und in die Zwischenablage zu kopieren!"
 
 #: data/cherrypick.metainfo.xml.in:30
 msgid "PhoneyBadger + Stella"
@@ -87,20 +80,15 @@ msgstr "Ändern Sie die Branding-Farben in eine schöne Kirsche"
 
 #: data/cherrypick.metainfo.xml.in:63
 msgid "All a glance: Preview tooltip shows all formats"
-msgstr ""
+msgstr "Alles auf einen Blick: Vorschau-Tooltip zeigt alle Formate"
 
 #: data/cherrypick.metainfo.xml.in:73
-msgid ""
-"Fix regression: Allow --immediately-pick when the window is already open"
-msgstr ""
-"Regression beheben: --immediately-pick zulassen, wenn das Fenster bereits "
-"geöffnet ist"
+msgid "Fix regression: Allow --immediately-pick when the window is already open"
+msgstr "Regression beheben: --immediately-pick zulassen, wenn das Fenster bereits geöffnet ist"
 
 #: data/cherrypick.metainfo.xml.in:74
 msgid "Not sure how to fix yet: the crosshair doesnt show..."
-msgstr ""
-"Bin mir noch nicht sicher, wie man das beheben kann: Das Fadenkreuz wird "
-"nicht angezeigt..."
+msgstr "Bin mir noch nicht sicher, wie man das beheben kann: Das Fadenkreuz wird nicht angezeigt..."
 
 #: data/cherrypick.metainfo.xml.in:81
 msgid "Clean appdata for flathub release"
@@ -108,9 +96,7 @@ msgstr "Bereinigung der Anwendungsdaten für die Flathub-Veröffentlichung"
 
 #: data/cherrypick.metainfo.xml.in:82
 msgid "Make sure the app doesnt crash at startup for flathub builds"
-msgstr ""
-"Stellen Sie sicher, dass die Anwendung beim Start von Flathub-Builds nicht "
-"abstürzt"
+msgstr "Stellen Sie sicher, dass die Anwendung beim Start von Flathub-Builds nicht abstürzt"
 
 #: data/cherrypick.metainfo.xml.in:89
 msgid "App now works on ARM thanks to @ryonakano!"
@@ -118,23 +104,15 @@ msgstr "App funktioniert jetzt auf ARM dank @ryonakano!"
 
 #: data/cherrypick.metainfo.xml.in:90
 msgid "Add the ability to immediately pick and copy to clipboard"
-msgstr ""
-"Hinzufügen der Möglichkeit zum sofortigen Auswählen und Kopieren in die "
-"Zwischenablage"
+msgstr "Hinzufügen der Möglichkeit zum sofortigen Auswählen und Kopieren in die Zwischenablage"
 
 #: data/cherrypick.metainfo.xml.in:91
 msgid "You can right-click on app icon and choose \"Immediately pick\""
-msgstr ""
-"Sie können mit der rechten Maustaste auf das App-Symbol klicken und \"Sofort "
-"auswählen\" wählen."
+msgstr "Sie können mit der rechten Maustaste auf das App-Symbol klicken und \"Sofort auswählen\" wählen."
 
 #: data/cherrypick.metainfo.xml.in:92
-msgid ""
-"Or set a keybind to \"flatpak run io.ellie_commons.cherrypick --immediately-"
-"pick\""
-msgstr ""
-"Oder setzen Sie eine Schlüsselbindung auf \"flatpak run io.ellie_commons."
-"cherrypick --immediately-pick\""
+msgid "Or set a keybind to \"flatpak run io.ellie_commons.cherrypick --immediately-pick\""
+msgstr "Oder setzen Sie eine Schlüsselbindung auf \"flatpak run io.ellie_commons.cherrypick --immediately-pick\""
 
 #: data/cherrypick.metainfo.xml.in:93
 msgid "Updated deprecated widgets"
@@ -153,19 +131,12 @@ msgid "2.0.0: The revival!"
 msgstr "2.0.0: Die Wiederbelebung!"
 
 #: data/cherrypick.metainfo.xml.in:107
-msgid ""
-"A new name, Cherrypick! Blessed by @adithyankv, the OG author. Thank you!"
-msgstr ""
-"Ein neuer Name, Cherrypick! Gesegnet von @adithyankv, dem OG-Autor. "
-"Dankeschön!"
+msgid "A new name, Cherrypick! Blessed by @adithyankv, the OG author. Thank you!"
+msgstr "Ein neuer Name, Cherrypick! Gesegnet von @adithyankv, dem OG-Autor. Dankeschön!"
 
 #: data/cherrypick.metainfo.xml.in:108
-msgid ""
-"Port to modern tech (GTK4, Wayland, portals, elementary 8). Not broken "
-"anymore!"
-msgstr ""
-"Portierung auf moderne Technik (GTK4, Wayland, Portale, Elementar 8). Nicht "
-"mehr gebrochen!"
+msgid "Port to modern tech (GTK4, Wayland, portals, elementary 8). Not broken anymore!"
+msgstr "Portierung auf moderne Technik (GTK4, Wayland, Portale, Elementar 8). Nicht mehr gebrochen!"
 
 #: data/cherrypick.metainfo.xml.in:109
 msgid "CMYK model available thanks to @DSLitvinov"
@@ -181,17 +152,11 @@ msgstr "Anscheinend ist HSLA auch eine Sache, also habe ich es hinzugefügt"
 
 #: data/cherrypick.metainfo.xml.in:112
 msgid "New feature: You can now paste a color from clipboard to preview it"
-msgstr ""
-"Neue Funktion: Sie können jetzt eine Farbe aus der Zwischenablage einfügen, "
-"um sie in der Vorschau anzuzeigen"
+msgstr "Neue Funktion: Sie können jetzt eine Farbe aus der Zwischenablage einfügen, um sie in der Vorschau anzuzeigen"
 
 #: data/cherrypick.metainfo.xml.in:113
-msgid ""
-"New feature: Hover over history buttons to see their code in your preferred "
-"format"
-msgstr ""
-"Neue Funktion: Bewegen Sie den Mauszeiger über die Verlaufsschaltflächen, um "
-"deren Code in Ihrem bevorzugten Format anzuzeigen"
+msgid "New feature: Hover over history buttons to see their code in your preferred format"
+msgstr "Neue Funktion: Bewegen Sie den Mauszeiger über die Verlaufsschaltflächen, um deren Code in Ihrem bevorzugten Format anzuzeigen"
 
 #: data/cherrypick.metainfo.xml.in:119
 msgid "Add command line flag to open directly in color picking mode"
