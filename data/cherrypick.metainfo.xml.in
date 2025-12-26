@@ -56,7 +56,7 @@
     </branding>
 
   <releases>
-    <release version="2.2.0" date="2025-12-25">
+    <release date="2025-12-25" version="2.2.0">
       <description>
         <ul>
           <li>Allow saving and restoring snapshots</li>
