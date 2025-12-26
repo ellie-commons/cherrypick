@@ -50,6 +50,11 @@
     </screenshot>
   </screenshots>
 
+    <branding>
+      <color type="primary" scheme_preference="light">#c6262e</color>
+      <color type="primary" scheme_preference="dark">#7a0000</color>
+    </branding>
+
   <releases>
     <release date="2025-12-20" version="2.1.7">
       <description>
