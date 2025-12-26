@@ -40,7 +40,7 @@ class Cherrypick.HistoryHeader: Granite.Bin {
 
         /* -------- PARENT WIDGET -------- */
         centerbox.start_widget = history_label;
-        centerbox.end_widget = right_buttons;
+        //centerbox.end_widget = right_buttons;
 
         child = centerbox;
 
