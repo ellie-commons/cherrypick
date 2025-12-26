@@ -5,40 +5,42 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-namespace Cherrypick {
-    public class ColorHistory: Object, Gee.Traversable<Color>, Gee.Iterable<Color> {
-        private Gee.LinkedList<Color> colors = new Gee.LinkedList<Color> ();
-        public int size {get; set construct;}
-        public signal void changed ();
+/**
+* A list of recently used colors
+*/
+public class Cherrypick.ColorHistory: Object, Gee.Traversable<Color>, Gee.Iterable<Color> {
+    private Gee.LinkedList<Color> colors = new Gee.LinkedList<Color> ();
+    public int size {get; set construct;}
+    public signal void changed ();
 
-        public ColorHistory (int size) {
-            Object (
-                size: size
-            );
-        }
+    public ColorHistory (int size) {
+        Object (
+            size: size
+        );
+    }
 
-        public void append (Color color) {
-            /* Remember only the newest "size" number of values. Discard older
-               ones */
-            if (colors.size < size) {
-                colors.add (color);
-                return;
-            }
-            colors.remove_at (0);
+    public void append (Color color) {
+        /* Remember only the newest "size" number of values. Discard older
+            ones */
+        if (colors.size < size) {
             colors.add (color);
-            changed ();
+            return;
         }
+        colors.remove_at (0);
+        colors.add (color);
+        changed ();
+    }
 
-        public new Color get (int index) {
-            return colors[index];
-        }
+    public new Color get (int index) {
+        return colors[index];
+    }
 
-        public bool @foreach (Gee.ForallFunc<Color> color) {
-            return iterator ().foreach (color);
-        }
+    public bool @foreach (Gee.ForallFunc<Color> color) {
+        return iterator ().foreach (color);
+    }
 
-        public Gee.Iterator<Color> iterator () {
-            return colors.iterator ();
-        }
+    public Gee.Iterator<Color> iterator () {
+        return colors.iterator ();
     }
 }
+

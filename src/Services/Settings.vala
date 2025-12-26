@@ -5,21 +5,23 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-namespace Cherrypick {
-    public class Settings: GLib.Settings {
-        private static Settings? instance;
+/**
+* Wrapper around GLib.Settings to retried it directly via get_instance ()
+*/
+public class Cherrypick.Settings: GLib.Settings {
+    private static Settings? instance;
 
-        public static Settings get_instance () {
-            if (instance == null) {
-                instance = new Settings ();
-            }
-            return instance;
+    public static Settings get_instance () {
+        if (instance == null) {
+            instance = new Settings ();
         }
+        return instance;
+    }
 
-        private Settings () {
-            Object (
-                schema_id: "io.github.ellie_commons.cherrypick"
-            );
-        }
+    private Settings () {
+        Object (
+            schema_id: "io.github.ellie_commons.cherrypick"
+        );
     }
 }
+

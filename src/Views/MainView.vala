@@ -5,6 +5,9 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/**
+* Buttons for color operation all goes there
+*/
 class Cherrypick.MainView: Gtk.Box {
 
     private Gtk.Button pick_button;

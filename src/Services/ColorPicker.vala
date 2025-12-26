@@ -5,6 +5,11 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/**
+* Service responsible for interacting with portals
+* It will communicate via the signal picked () when it is done
+* It communicates results to the ColorController
+*/
 public class Cherrypick.ColorPicker : Object {
     private Xdp.Portal portal;
     public ColorController color_controller;

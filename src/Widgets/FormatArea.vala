@@ -5,6 +5,9 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/**
+* Horizontal box containing a formatted color into string, and a menu to choose preferred format
+*/
 public class Cherrypick.FormatArea : Gtk.Box {
     public Cherrypick.Color color {get; set;}
     public Format color_format {get; set;}
@@ -90,27 +93,13 @@ public class Cherrypick.FormatArea : Gtk.Box {
             return;
         }
         switch (color_format) {
-            case Format.HEX:
-                format_entry.text = color.to_hex_string ();
-                break;
-            case Format.RGB:
-                format_entry.text = color.to_rgb_string ();
-                break;
-            case Format.RGBA:
-                format_entry.text = color.to_rgba_string ();
-                break;
-            case Format.CMYK:
-                format_entry.text = color.to_cmyk_string ();
-                break;
-            case Format.HSL:
-                format_entry.text = color.to_hsl_string ();
-                break;
-            case Format.HSLA:
-                format_entry.text = color.to_hsla_string ();
-                break;
-            default:
-                format_entry.text = color.to_rgba_string ();
-                break;
+            case Format.HEX:    format_entry.text = color.to_hex_string (); break;
+            case Format.RGB:    format_entry.text = color.to_rgb_string (); break;
+            case Format.RGBA:   format_entry.text = color.to_rgba_string (); break;
+            case Format.CMYK:   format_entry.text = color.to_cmyk_string (); break;
+            case Format.HSL:    format_entry.text = color.to_hsl_string (); break;
+            case Format.HSLA:   format_entry.text = color.to_hsla_string (); break;
+            default:            format_entry.text = color.to_rgba_string (); break;
         }
     }
 

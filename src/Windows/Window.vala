@@ -58,7 +58,6 @@ public class Cherrypick.Window : Gtk.Window {
         //headerbar.pack_start (new Gtk.WindowControls (Gtk.PackType.START));
 
 
-        
         vbox = new Cherrypick.MainView ();
 
 

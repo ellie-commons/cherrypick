@@ -5,59 +5,63 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-namespace Cherrypick {
-    public class ColorController : Object {
-        /* Controlls the state of the color picker. UI elements derive their
-           state from the controller. Implemented as a singleton for ease
-           of access from multiple UI components */
+/**
+* Controlls the state of the color picker.
+* UI elements derive their state from the controller.
+* Implemented as a singleton for ease of access from multiple UI components
+* Everything is kept there but most widgets are public
+*/
+public class Cherrypick.ColorController : Object {
 
-        private static ColorController? instance;
+    private static ColorController? instance;
 
-        public Cherrypick.Color preview_color {get; set;}
-        public Cherrypick.Color last_picked_color {get; set;}
-        public Cherrypick.ColorHistory color_history {get; set;}
+    public Cherrypick.Color preview_color {get; set;}
+    public Cherrypick.Color last_picked_color {get; set;}
+    public Cherrypick.ColorHistory color_history {get; set;}
 
-        private const int HISTORY_SIZE = 5;
+    private const int HISTORY_SIZE = 5;
 
-        public static ColorController get_instance () {
-            if (instance == null) {
-                instance = new ColorController ();
-            }
-            return instance;
+    /**
+    * Gets reference to the controller
+    */
+    public static ColorController get_instance () {
+        if (instance == null) {
+            instance = new ColorController ();
         }
+        return instance;
+    }
 
-        private ColorController () {}
+    private ColorController () {}
 
-        construct {
-            color_history = new ColorHistory (HISTORY_SIZE);
+    construct {
+        color_history = new Cherrypick.ColorHistory (HISTORY_SIZE);
 
-            notify ["last-picked-color"].connect (() => {
-                preview_color = last_picked_color;
-            });
+        notify ["last-picked-color"].connect (() => {
+            preview_color = last_picked_color;
+        });
 
-            load_history_from_gsettings ();
+        load_history_from_gsettings ();
 
-            color_history.changed.connect (save_history_to_gsettings);
+        color_history.changed.connect (save_history_to_gsettings);
+    }
+
+    public void load_history_from_gsettings () {
+        var settings = Cherrypick.Settings.get_instance ();
+        var color_history_rgba_codes = settings.get_strv ("color-history");
+        foreach (var rgba_code in color_history_rgba_codes) {
+            var color = new Color ();
+            color.parse (rgba_code);
+            color_history.append (color);
         }
+        last_picked_color = color_history[color_history.size - 1];
+    }
 
-        public void load_history_from_gsettings () {
-            var settings = Settings.get_instance ();
-            var color_history_rgba_codes = settings.get_strv ("color-history");
-            foreach (var rgba_code in color_history_rgba_codes) {
-                var color = new Color ();
-                color.parse (rgba_code);
-                color_history.append (color);
-            }
-            last_picked_color = color_history[color_history.size - 1];
+    public void save_history_to_gsettings () {
+        var settings = Cherrypick.Settings.get_instance ();
+        var rgba_codes = new string[color_history.size];
+        for (int i = 0; i < color_history.size; i++) {
+            rgba_codes[i] = color_history[i].to_rgba_string ();
         }
-
-        public void save_history_to_gsettings () {
-            var settings = Settings.get_instance ();
-            var rgba_codes = new string[color_history.size];
-            for (int i = 0; i < color_history.size; i++) {
-                rgba_codes[i] = color_history[i].to_rgba_string ();
-            }
-            settings.set_strv ("color-history", rgba_codes);
-        }
+        settings.set_strv ("color-history", rgba_codes);
     }
 }

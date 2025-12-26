@@ -5,6 +5,9 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/**
+* The right side, a flat preview surface previewing the last picked color
+*/
 public class Cherrypick.ColorPreview : Gtk.Box {
     private string color_definition = "
 @define-color preview_color %s;

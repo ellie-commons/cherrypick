@@ -5,6 +5,9 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/**
+* A label announcing the HistoryButtons, with a couple buttons on the right operating it
+*/
 class Cherrypick.HistoryHeader: Granite.Bin {
 
     public signal void saved (string message);
