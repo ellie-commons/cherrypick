@@ -7,6 +7,7 @@ picker_source_files = files(
   'Windows/Window.vala',
   'Widgets/ColorPreview.vala',
   'Widgets/FormatArea.vala',
+  'Widgets/HistoryHeader.vala',
   'Widgets/HistoryButtons.vala',
   'Widgets/ColorButton.vala',
   'Widgets/ColorPicker.vala',

@@ -1,3 +1,4 @@
 src/Windows/Window.vala
 src/Widgets/FormatArea.vala
+src/Widgets/HistoryHeader.vala
 src/Application.vala

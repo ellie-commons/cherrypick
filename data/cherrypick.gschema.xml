@@ -16,6 +16,12 @@
       <summary>Color history</summary>
       <description>The hex values for last selected colors</description>
     </key>
+    <key name="color-snapshot" type="as">
+      <!-- Setting default to some of the colors from elementary palette -->
+      <default>["#ed5353", "#f37329", "#f9c440", "#9bdb4d", "#a56de2"]</default>
+      <summary>Color history</summary>
+      <description>The hex values for last selected colors</description>
+    </key>
     <key name="color-format" enum="io.github.ellie_commons.cherrypick.format">
       <default>"hex"</default>
       <summary>Color format</summary>

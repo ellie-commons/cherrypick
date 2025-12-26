@@ -72,21 +72,24 @@ namespace Cherrypick {
                 margin_top = 8
             };
             format_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-            format_label.add_css_class ("title-4");
 
             format_area = new Cherrypick.FormatArea ();
 
             var history_label = new Gtk.Label (_("History")) {
                 xalign = 0f,
-                margin_top = 8
+                halign = Gtk.Align.START
             };
             history_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-            history_label.add_css_class ("title-4");
+
+
+            var history_header = new HistoryHeader () {
+                margin_top = 6
+            };
 
             var history_buttons = new HistoryButtons ();
 
             pick_button = new Gtk.Button.with_label (_("Pick Color")) {
-                margin_top = 8,
+                margin_top = 6,
                 tooltip_text = _("Allows you to click on a colour on the screen to get its code in the preferred format")
             };
             pick_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
@@ -104,7 +107,7 @@ namespace Cherrypick {
             vbox.append (overlay);
             vbox.append (format_label);
             vbox.append (format_area);
-            vbox.append (history_label);
+            vbox.append (history_header);
             vbox.append (history_buttons);
             vbox.append (pick_button);
 
@@ -132,9 +135,9 @@ namespace Cherrypick {
             // Make sure all the tooltips are up to date
             history_buttons.update_buttons ();
 
-            format_area.format_selector.notify ["selected"].connect_after (() => {
-                history_buttons.update_buttons ();
-            });
+
+            /* ---------------- CONNECTS AND BINDS ---------------- */
+            format_area.format_selector.notify ["selected"].connect_after (history_buttons.update_buttons);
 
             format_area.copied.connect ((message) => {
                 if (message != "") {
@@ -143,8 +146,11 @@ namespace Cherrypick {
                 }
             });
 
+            history_header.saved.connect (on_saved);
+
             pick_button.clicked.connect (on_pick);
             color_picker.picked.connect (format_area.copy_to_clipboard);
+
 
             /* when the app is opened the user probably wants to pick the color
                straight away. So setting the pick button as focused default
@@ -154,6 +160,11 @@ namespace Cherrypick {
 
         public void on_pick () {
             color_picker.pick.begin ();
+        }
+
+        private void on_saved () {
+            toast.title = _("History saved");
+            toast.send_notification ();
         }
     }
 }
