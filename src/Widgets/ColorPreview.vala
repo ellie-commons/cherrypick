@@ -9,6 +9,9 @@
 * The right side, a flat preview surface previewing the last picked color
 */
 public class Cherrypick.ColorPreview : Gtk.Box {
+
+    private ColorController color_controller;
+
     private string color_definition = "
 @define-color preview_color %s;
 
@@ -26,40 +29,37 @@ box-shadow:
 
     public ColorPreview () {
         Object (
-            orientation: Gtk.Orientation.HORIZONTAL,
+            orientation: Gtk.Orientation.VERTICAL,
             spacing: 0,
             hexpand: true
         );
     }
 
     construct {
-        create_style ();
-        sync_color_with_controller ();
-    }
+/*          var headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = false,
+            title_widget = new Gtk.Grid () {visible = false}
+        };
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        headerbar.pack_end (new Gtk.WindowControls (Gtk.PackType.END));
+        append (headerbar);  */
+        append (new Gtk.WindowControls (Gtk.PackType.END));
 
-    private void create_style () {
         add_css_class ("color-preview");
 
         css_provider = new Gtk.CssProvider ();
-
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             css_provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         );
+
+        color_controller = ColorController.get_instance ();
+        realize.connect (preview);
+        color_controller.notify ["preview-color"].connect (preview);
     }
 
-    private void sync_color_with_controller () {
-        var color_controller = ColorController.get_instance ();
-
-        realize.connect (() => {
-            set_color (color_controller.preview_color);
-        });
-
-        color_controller.notify ["preview-color"].connect (() => {
-            set_color (color_controller.preview_color);
-        });
-
+    private void preview () {
         set_color (color_controller.preview_color);
     }
 

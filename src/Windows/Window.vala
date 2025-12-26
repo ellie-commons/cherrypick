@@ -43,10 +43,7 @@ public class Cherrypick.Window : Gtk.Window {
         insert_action_group ("app", actions);
 
         // We need to hide the title area for the split headerbar
-        var null_title = new Gtk.Grid () {
-            visible = false
-        };
-        set_titlebar (null_title);
+        set_titlebar (new Gtk.Grid () {visible = false});
 
         var titlelabel = new Gtk.Label (_("Cherrypick"));
         titlelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
@@ -55,6 +52,7 @@ public class Cherrypick.Window : Gtk.Window {
             title_widget = titlelabel
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        //headerbar.show_title_buttons = false;
         //headerbar.pack_start (new Gtk.WindowControls (Gtk.PackType.START));
 
         vbox = new Cherrypick.MainView ();
