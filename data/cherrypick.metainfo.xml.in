@@ -56,7 +56,7 @@
     </branding>
 
   <releases>
-    <release date="2025-12-25" version="2.2.0">
+    <release date="2025-12-26" version="2.2.0">
       <description>
         <ul>
           <li>Change branding colors to a nice cherry</li>
