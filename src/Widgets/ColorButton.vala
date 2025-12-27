@@ -6,10 +6,12 @@
  */
 
 class Cherrypick.ColorButton: Gtk.Box {
+
     public Cherrypick.Color color;
     public Gtk.Button button;
     new string css_name;
     private Gtk.CssProvider css_provider;
+    private Gtk.Overlay color_overlay;
 
     private const string BUTTON_CSS = """
         .%s * {
@@ -24,22 +26,26 @@ class Cherrypick.ColorButton: Gtk.Box {
         //tooltip_text = _("Switch preview and colour code to this colour");
 
         css_provider = new Gtk.CssProvider ();
-
-        this.color = newcolor;
         css_name = name;
-        add_css_class (name);
+        color = newcolor;
 
         button = new Gtk.Button () {
             width_request = 52
         };
+        button.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
+
+        color_overlay = new Gtk.Overlay () {
+            child = button
+        };
+        color_overlay.add_css_class (css_name);
 
         update_color (newcolor);
-        append (button);
+        append (color_overlay);
 
     }
 
     public void update_color (Color newcolor) {
-            remove_css_class (css_name);
+            button.remove_css_class (css_name);
             color = newcolor;
             var css = BUTTON_CSS.printf (css_name, newcolor.to_rgba_string ());
             css_provider.load_from_string (css);
@@ -49,7 +55,7 @@ class Cherrypick.ColorButton: Gtk.Box {
                 css_provider,
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
-            add_css_class (css_name);
+            button.add_css_class (css_name);
 
     }
 }

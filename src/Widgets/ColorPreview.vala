@@ -6,8 +6,8 @@
  */
 
 /**
-* The right side, a flat preview surface previewing the last picked color
-*/
+ * The right side, a flat preview surface previewing the last picked color
+ */
 public class Cherrypick.ColorPreview : Gtk.Box {
 
     private ColorController color_controller;
