@@ -5,20 +5,22 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+ /**
+ * A button displaying a single solid color. If it has an alpha channel, it will be displayed with a checkerboard.
+ */
 class Cherrypick.ColorButton: Gtk.Box {
 
     public Cherrypick.Color color;
     public Gtk.Button button;
     new string css_name;
     private Gtk.CssProvider css_provider;
-    private Gtk.Overlay color_overlay;
+    private Gtk.Overlay overlay_color;
 
     private const string BUTTON_CSS = """
         .%s * {
             background-color: %s;
         }
     """;
-
 
     public ColorButton (Color newcolor, string name) {
 
@@ -32,21 +34,26 @@ class Cherrypick.ColorButton: Gtk.Box {
         button = new Gtk.Button () {
             width_request = 52
         };
-        button.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
+        button.add_css_class (css_name);
 
-        color_overlay = new Gtk.Overlay () {
+        overlay_color = new Gtk.Overlay () {
             child = button
         };
-        color_overlay.add_css_class (css_name);
+        overlay_color.add_css_class (css_name);
+        overlay_color.add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
 
         update_color (newcolor);
-        append (color_overlay);
+        append (overlay_color);
 
     }
 
     public void update_color (Color newcolor) {
             button.remove_css_class (css_name);
+            overlay_color.remove_css_class (css_name);
+
             color = newcolor;
+
+            // Prepare the new sauce
             var css = BUTTON_CSS.printf (css_name, newcolor.to_rgba_string ());
             css_provider.load_from_string (css);
 
@@ -55,7 +62,8 @@ class Cherrypick.ColorButton: Gtk.Box {
                 css_provider,
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
-            button.add_css_class (css_name);
 
+            button.add_css_class (css_name);
+            overlay_color.add_css_class (css_name);
     }
 }

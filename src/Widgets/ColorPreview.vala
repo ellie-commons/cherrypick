@@ -6,7 +6,8 @@
  */
 
 /**
- * The right side, a flat preview surface previewing the last picked color
+ * The right side, a flat preview surface previewing the last picked color.
+ * If said color has alpha, it will be displayed with a checkerboard.
  */
 public class Cherrypick.ColorPreview : Gtk.Box {
 

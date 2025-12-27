@@ -28,6 +28,18 @@ public enum Cherrypick.Format {
         }
     }
 
+    public bool supports_alpha () {
+        switch (this) {
+            case HEX: return false;
+            case RGB: return false;
+            case RGBA: return true;
+            case CMYK: return false;
+            case HSL: return false;
+            case HSLA: return true;
+            default: assert_not_reached ();
+        }
+    }
+
     public static Format[] all () {
         return {HEX, RGB, RGBA, CMYK, HSL, HSLA};
     }

@@ -6,8 +6,8 @@
  */
 
 /**
-* Horizontal list of ColorButtons representing the content of ColorHistory
-*/
+ * Horizontal list of ColorButtons representing the content of ColorHistory
+ */
 class Cherrypick.HistoryButtons: Gtk.Box {
     private Gee.ArrayList<ColorButton> color_buttons;
     private ColorController color_controller;
