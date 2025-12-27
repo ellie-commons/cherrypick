@@ -1,0 +1,64 @@
+# ITALIAN TRANSLATION.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.cherrypick package.
+# ALBANO BATTISTELLA <ALBANOBATTISTELLA@GMAIL.COM>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.ellie_commons.cherrypick\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-26 17:04+0100\n"
+"PO-Revision-Date: 2025-12-27 16:41+0100\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. /TRANSLATORS: Do not translate app name
+#. We need to hide the title area for the split headerbar
+#: src/Windows/Window.vala:31 src/Windows/Window.vala:48
+msgid "Cherrypick"
+msgstr "Cherrypick"
+
+#: src/Widgets/FormatArea.vala:66
+msgid "Click to paste a colour if you have one saved up"
+msgstr "Fai clic per incollare un colore se ne hai uno salvato"
+
+#: src/Widgets/FormatArea.vala:69
+msgid "Click to copy this colour to your clipboard"
+msgstr "Fai clic per copiare questo colore negli appunti"
+
+#: src/Widgets/FormatArea.vala:75
+msgid "Choose your preferred format to display picked colours"
+msgstr "Scegli il formato preferito per visualizzare i colori selezionati"
+
+#: src/Widgets/FormatArea.vala:109
+msgid "Copied to clipboard!"
+msgstr "Copiato negli appunti!"
+
+#: src/Widgets/FormatArea.vala:138
+msgid "Cannot detect colour!"
+msgstr "Impossibile rilevare il colore!"
+
+#: src/Widgets/HistoryHeader.vala:19
+msgid "History"
+msgstr "Cronologia"
+
+#: src/Widgets/HistoryHeader.vala:28
+msgid "Save a snapshot of current color history"
+msgstr "Salva uno snapshot della cronologia del colore corrente"
+
+#: src/Widgets/HistoryHeader.vala:33
+msgid "Restore history snapshot"
+msgstr "Ripristina snapshot della cronologia"
+
+#: src/Widgets/HistoryHeader.vala:53
+msgid "History saved"
+msgstr "Cronologia salvata"
+
+#: src/Application.vala:129
+msgid "Pick a colour and copy it to clipboard"
+msgstr "Scegli un colore e copialo negli appunti"
