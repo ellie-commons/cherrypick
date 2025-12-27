@@ -45,7 +45,18 @@ box-shadow:
         append (headerbar);  */
         //append (new Gtk.WindowControls (Gtk.PackType.END));
 
-        add_css_class ("color-preview");
+
+        var overlay_color = new Gtk.Overlay () {
+            hexpand = true,
+            vexpand = true
+        };
+        overlay_color.add_css_class ("color-preview");
+        append (overlay_color);
+
+        add_css_class (Granite.STYLE_CLASS_CHECKERBOARD);
+        
+
+
 
         css_provider = new Gtk.CssProvider ();
         Gtk.StyleContext.add_provider_for_display (
