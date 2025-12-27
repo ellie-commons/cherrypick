@@ -13,8 +13,6 @@
 */
 public class Cherrypick.ColorController : Object {
 
-    private static ColorController? instance;
-
     public Cherrypick.Color preview_color {get; set;}
     public Cherrypick.Color last_picked_color {get; set;}
     public Cherrypick.ColorHistory color_history {get; set;}
@@ -24,6 +22,7 @@ public class Cherrypick.ColorController : Object {
     /**
     * Gets reference to the controller
     */
+    private static ColorController? instance;
     public static ColorController get_instance () {
         if (instance == null) {
             instance = new ColorController ();
