@@ -56,6 +56,13 @@
     </branding>
 
   <releases>
+    <release date="2025-12-27" version="2.2.1">
+      <description>
+        <ul>
+          <li>Prevent Cherrypick from lingering in the background</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-12-26" version="2.2.0">
       <description>
         <ul>
