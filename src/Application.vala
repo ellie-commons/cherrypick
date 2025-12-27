@@ -149,7 +149,6 @@ public class Cherrypick.Application : Gtk.Application {
             return 0;
         }
 
-        hold ();
         activate ();
         return 0;
     }
