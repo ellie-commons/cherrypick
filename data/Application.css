@@ -4,8 +4,3 @@
     background-color: @preview_color;
     box-shadow: inset 1px 0 0 0 shade(@preview_color, 1.07);
 }
-
-/* .title-4 {
-    font-weight: 700;
-    opacity: 0.8;
-} */

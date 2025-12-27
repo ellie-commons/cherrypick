@@ -27,7 +27,7 @@
   </recommends>
 
   <developer id="io.github.ellie-commons">
-    <name>PhoneyBadger + Stella</name>
+    <name>PhoneyBadger + ellie-commons community</name>
   </developer>
   <project_group>ellie-commons</project_group>
     <url type="homepage">https://github.com/ellie-commons/cherrypick</url>
@@ -56,6 +56,14 @@
     </branding>
 
   <releases>
+    <release date="2026-01-10" version="2.3.0">
+      <description>
+        <ul>
+          <li>Show a pasted color has alpha by displaying a checkerboard</li>
+          <li>Italian translation thanks to @albanobattistella!</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-12-27" version="2.2.1">
       <description>
         <ul>
