@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-26 17:04+0100\n"
-"PO-Revision-Date: 2025-12-27 16:52+0100\n"
+"PO-Revision-Date: 2025-12-28 10:12+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -90,7 +90,7 @@ msgstr "Tutto a colpo d'occhio: il tooltip di anteprima mostra tutti i formati"
 #: data/cherrypick.metainfo.xml.in:73  
 msgid ""  
 "Fix regression: Allow --immediately-pick when the window is already open"  
-msgstr "Correzione regressione: Permetti --immediately-pick quando la finestra è già aperta"  
+msgstr "Correzione regressione: Permetti --selezione-immediata quando la finestra è già aperta"  
    
 #: data/cherrypick.metainfo.xml.in:74  
 msgid "Not sure how to fix yet: the crosshair doesnt show..."  
