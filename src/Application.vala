@@ -104,30 +104,7 @@ public class Cherrypick.Application : Gtk.Application {
         /* Opens and immediately starts picking color if the --immediately-pick
             flag is passed when launching from the command line. This could
             be helpful for the user to set up keybindings and stuff */
-        if (is_immediately_pick) { immediately_pick (); is_immediately_pick = false;};
-    }
-
-    // The initial plan was to have a function that skips using a UI entirely
-    // Notify, start picking, copy result in preferred format, notify it is ready
-    // Right now however i cant seem to make it work properly, so it will just be a pick action
-    private void immediately_pick () {
-
-/*          var notification = new Notification (_("Pick a color"));
-        // TRANSLATORS: "%s%%" is replaced by a colour code 
-        var body = _("Pick a colour on your screen and it will be copied to your clipboard");
-        notification.set_body (body);
-        notification.set_priority (GLib.NotificationPriority.NORMAL);
-        this.send_notification ("notify.app", notification);*/
-
-        window.on_pick ();
-
-        /* var notification_end = new Notification (_("Copied to clipboard!"));
-        // TRANSLATORS: "%s%%" is replaced by a colour code 
-        var body = _("%s has been copied to your clipboard").printf (picked_formatted);
-        notification_end.set_body (body);
-        notification_end.set_priority (GLib.NotificationPriority.NORMAL);
-        this.send_notification ("notify.app", notification_end);  */
-
+        if (is_immediately_pick) { window.on_pick (); is_immediately_pick = false;};
     }
 
     public override int command_line (ApplicationCommandLine command_line) {
