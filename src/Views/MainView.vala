@@ -51,7 +51,9 @@ class Cherrypick.MainView: Gtk.Box {
         /* ---------------- BIG BUTTON ---------------- */
         pick_button = new Gtk.Button.with_label (_("Pick Color")) {
             margin_top = 12,
-            tooltip_text = _("Allows you to click on a colour on the screen to get its code in the preferred format")
+            tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>P"},
+                _("Click to pick a color on the screen"))
         };
         pick_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
