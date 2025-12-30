@@ -63,11 +63,14 @@ public class Cherrypick.FormatArea : Gtk.Box {
 
 
         format_entry.primary_icon_name = "edit-paste-symbolic";
-        format_entry.primary_icon_tooltip_text = _("Click to paste a colour if you have one saved up");
+        format_entry.primary_icon_tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>V"},
+                _("Click to paste a colour if you have one saved up"));
 
         format_entry.secondary_icon_name = "edit-copy-symbolic";
-        format_entry.secondary_icon_tooltip_text = _("Click to copy this colour to your clipboard");
-
+        format_entry.secondary_icon_tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>C"},
+                _("Click to copy this colour to your clipboard"));
 
         var supported_formats = new Gtk.StringList (Cherrypick.Format.all_string ());
 
@@ -109,7 +112,7 @@ public class Cherrypick.FormatArea : Gtk.Box {
         this.copied ( _("Copied to clipboard!"));
     }
 
-    private void paste_from_clipboard () {
+    public void paste_from_clipboard () {
         var clipboard = Gdk.Display.get_default ().get_clipboard ();
         clipboard.read_text_async.begin ((null), (obj, res) => {
             try {

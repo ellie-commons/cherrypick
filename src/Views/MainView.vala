@@ -12,6 +12,7 @@ class Cherrypick.MainView: Gtk.Box {
 
     private Granite.Toast toast;
     private ColorPicker color_picker;
+    private Cherrypick.FormatArea format_area;
     public Gtk.Button pick_button;
 
     construct {
@@ -37,7 +38,7 @@ class Cherrypick.MainView: Gtk.Box {
             margin_top = 6
         };
         format_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-        var format_area = new Cherrypick.FormatArea ();
+        format_area = new Cherrypick.FormatArea ();
 
 
         /* ---------------- HISTORY ---------------- */
@@ -90,5 +91,13 @@ class Cherrypick.MainView: Gtk.Box {
 
     public void on_pick () {
         color_picker.pick.begin ();
+    }
+
+    public void copy () {
+        format_area.copy_to_clipboard ();
+    }
+
+    public void paste () {
+        format_area.paste_from_clipboard ();
     }
 }

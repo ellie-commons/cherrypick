@@ -39,6 +39,14 @@ public class Cherrypick.Application : Gtk.Application {
         var pick_action = new SimpleAction ("pick", null);
         add_action (pick_action);
         set_accels_for_action ("app.pick", {"<Control>p"});
+
+        var copy_action = new SimpleAction ("copy", null);
+        add_action (copy_action);
+        set_accels_for_action ("app.copy", {"<Control>c"});
+
+        var paste_action = new SimpleAction ("paste", null);
+        add_action (paste_action);
+        set_accels_for_action ("app.paste", {"<Control>v"});
     }
 
     public override void startup () {

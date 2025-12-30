@@ -17,11 +17,15 @@ public class Cherrypick.Window : Gtk.Window {
     public SimpleActionGroup actions { get; construct; }
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_PICK = "pick";
+    public const string ACTION_COPY = "copy";
+    public const string ACTION_PASTE = "paste";
 
     public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_PICK, on_pick }
+        { ACTION_PICK, on_pick },
+        { ACTION_COPY, copy },
+        { ACTION_PASTE, paste }
     };
 
     public Window (Gtk.Application app) {
@@ -82,5 +86,13 @@ public class Cherrypick.Window : Gtk.Window {
 
     public void on_pick () {
         vbox.on_pick ();
+    }
+
+    public void copy () {
+        vbox.copy ();
+    }
+
+    public void paste () {
+        vbox.paste ();
     }
 }
