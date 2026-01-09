@@ -1,9 +1,9 @@
-id: io.github.ellie_commons.cherrypick
+id: io.github.elly_codes.cherrypick
 runtime: io.elementary.Platform
 # Currently this crashes for 8.2 (which flathub has) bc https://github.com/elementary/granite/pull/893
 runtime-version: '8'
 sdk: io.elementary.Sdk
-command: io.github.ellie_commons.cherrypick
+command: io.github.elly_codes.cherrypick
 
 finish-args:
   - '--share=ipc'

@@ -25,7 +25,7 @@ public class Cherrypick.Application : Gtk.Application {
 
     public Application () {
         Object (
-            application_id: "io.github.ellie_commons.cherrypick",
+            application_id: "io.github.elly_codes.cherrypick",
             flags: ApplicationFlags.HANDLES_COMMAND_LINE
         );
     }
@@ -76,7 +76,7 @@ public class Cherrypick.Application : Gtk.Application {
         });
 
         var provider = new Gtk.CssProvider ();
-        provider.load_from_resource ("/io/github/ellie_commons/cherrypick/Application.css");
+        provider.load_from_resource ("/io.github.elly_codes.cherrypick/Application.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             provider,

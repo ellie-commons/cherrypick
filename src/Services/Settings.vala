@@ -20,7 +20,7 @@ public class Cherrypick.Settings: GLib.Settings {
 
     private Settings () {
         Object (
-            schema_id: "io.github.ellie_commons.cherrypick"
+            schema_id: "io.github.elly_codes.cherrypick"
         );
     }
 }

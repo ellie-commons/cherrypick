@@ -6,8 +6,8 @@ GenericName=Color Picker
 Comment=Pick colors on your screen
 Categories=Graphics;Utility;
 
-Icon=io.github.ellie_commons.cherrypick
-Exec=io.github.ellie_commons.cherrypick
+Icon=io.github.elly_codes.cherrypick
+Exec=io.github.elly_codes.cherrypick
 SingleMainWindow=true
 Terminal=false
 Keywords=Color;Pick;Eyedropper;Picker;
@@ -16,4 +16,4 @@ Actions=ImmediatelyPick;
 [Desktop Action ImmediatelyPick]
 Name=Pick a color
 Icon=color-picker
-Exec=io.github.ellie_commons.cherrypick --immediately-pick
+Exec=io.github.elly_codes.cherrypick --immediately-pick

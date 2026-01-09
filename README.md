@@ -3,20 +3,20 @@
     <img alt="An icon of an eyedropper with a rainbow circle in the background" src="data/icons/png/128.png">
   <h1>Cherrypick</h1>
   <h3>Cherry-pick colors on your screen</h3>
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/cherrypick/blob/main/data/screenshots/window-light.png" alt="A screenshot of a window with a side displaying options and the other a single solid color"></span>
+<span align="center"> <img class="center" src="https://github.com/elly-codes/cherrypick/blob/main/data/screenshots/window-light.png" alt="A screenshot of a window with a side displaying options and the other a single solid color"></span>
 </div>
 
   <a href="https://elementary.io">
-    <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
+    <img src="https://elly-codes.github.io/community-badge.svg" alt="Made for elementary OS">
   </a>
 
 ## Installation
 
 Cherrypick is designed and developed primarily for [elementary OS]. The latest stable release is available via AppCenter.
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.cherrypick) 
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.elly_codes.cherrypick) 
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.cherrypick)
+[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.elly_codes.cherrypick)
 
 
 
@@ -35,7 +35,7 @@ and run the following command:
 ### On elementary OS or with its appcenter remote installed
 
 ```bash
-flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.cherrypick.yml
+flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.elly_codes.cherrypick.yml
 ```
 
 ### On other systems:
