@@ -56,9 +56,10 @@
     </branding>
 
   <releases>
-    <release date="2026-01-10" version="2.3.0">
+    <release date="2026-01-13" version="2.3.0">
       <description>
         <ul>
+          <li>Organization change</li>
           <li>Show a pasted color has alpha by displaying a checkerboard</li>
           <li>Italian translation thanks to @albanobattistella!</li>
         </ul>
