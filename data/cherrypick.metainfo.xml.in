@@ -6,7 +6,13 @@
   <launchable type="desktop-id">io.github.elly_code.cherrypick.desktop</launchable>
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-
+  <provides>
+    <id>io.github.ellie_commons.cherrypick</id>
+    <binary>io.github.ellie_commons.cherrypick</binary>
+  </provides>
+  <replaces>
+    <id>io.github.ellie_commons.cherrypick</id>
+  </replaces>
   <description>
     <p>A modern and trusty color picker</p>
     <p>Features:</p>
