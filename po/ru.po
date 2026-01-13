@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_codes.cherrypick\n"
+"Project-Id-Version: io.github.elly_code.cherrypick\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-26 17:04+0100\n"
 "PO-Revision-Date: 2022-09-27 20:44+0900\n"

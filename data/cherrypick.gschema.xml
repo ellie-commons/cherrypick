@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <enum id="io.github.elly_codes.cherrypick.format">
+  <enum id="io.github.elly_code.cherrypick.format">
     <value value="0" nick="hex"/>
     <value value="1" nick="rgb"/>
     <value value="2" nick="rgba"/>
@@ -9,7 +9,7 @@
     <value value="5" nick="hsla"/>
   </enum>
 
-  <schema path="/io.github.elly_codes.cherrypick/" id="io.github.elly_codes.cherrypick">
+  <schema path="/io.github.elly_code.cherrypick/" id="io.github.elly_code.cherrypick">
     <key name="color-history" type="as">
       <!-- Setting default to some of the colors from elementary palette -->
       <default>["rgba(237, 83, 83, 1)", "rgba(243, 115, 41, 1)", "rgba(249, 196, 64, 1)", "rgba(155, 219, 77, 1)", "rgba(165, 109, 226, 1)"]</default>
@@ -22,7 +22,7 @@
       <summary>Color history</summary>
       <description>The rgba values for saved snapshot</description>
     </key>
-    <key name="color-format" enum="io.github.elly_codes.cherrypick.format">
+    <key name="color-format" enum="io.github.elly_code.cherrypick.format">
       <default>"rgba"</default>
       <summary>Color format</summary>
       <description>Last selected color format</description>

@@ -1,11 +1,11 @@
-id: io.github.elly_codes.cherrypick
+id: io.github.elly_code.cherrypick
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
 base-version: 'circe-25.08'
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
-command: io.github.elly_codes.cherrypick
+command: io.github.elly_code.cherrypick
 
 finish-args:
   - '--share=ipc'
@@ -30,7 +30,7 @@ modules:
     buildsystem: meson
     sources:
       - type: git
-        url: https://github.com/elly-codes/cherrypick.git
+        url: https://github.com/elly-code/cherrypick.git
         tag: 2.2.1
         commit: fca7efc8b244172b7a4af4172916b3a818ca62b2
         x-checker-data:

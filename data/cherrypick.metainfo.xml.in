@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>io.github.elly_codes.cherrypick</id>
+  <id>io.github.elly_code.cherrypick</id>
   <name>Cherrypick</name>
   <summary>Pick colors on your screen</summary>
-  <launchable type="desktop-id">io.github.elly_codes.cherrypick.desktop</launchable>
+  <launchable type="desktop-id">io.github.elly_code.cherrypick.desktop</launchable>
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 
@@ -20,32 +20,32 @@
   </description>
 
   <content_rating type="oars-1.1"/>
-  <translation type="gettext" source_locale="en_GB">io.github.elly_codes.cherrypick</translation>
+  <translation type="gettext" source_locale="en_GB">io.github.elly_code.cherrypick</translation>
   <recommends>
     <control>pointing</control>
     <control>touch</control>
   </recommends>
 
-  <developer id="io.github.elly-codes">
-    <name>PhoneyBadger + elly-codes community</name>
+  <developer id="io.github.elly-code">
+    <name>PhoneyBadger + elly-code community</name>
   </developer>
-  <project_group>elly-codes</project_group>
-    <url type="homepage">https://github.com/elly-codes/cherrypick</url>
-    <url type="bugtracker">https://github.com/elly-codes/cherrypick/issues</url>
-    <url type="help">https://github.com/elly-codes/cherrypick/issues</url>
+  <project_group>elly-code</project_group>
+    <url type="homepage">https://github.com/elly-code/cherrypick</url>
+    <url type="bugtracker">https://github.com/elly-code/cherrypick/issues</url>
+    <url type="help">https://github.com/elly-code/cherrypick/issues</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
 
   <screenshots>
     <screenshot type="default">
       <caption>Cherrypick's main window</caption>
       <image>
-        https://github.com/elly-codes/cherrypick/blob/main/data/screenshots/window-light.png?raw=true
+        https://github.com/elly-code/cherrypick/blob/main/data/screenshots/window-light.png?raw=true
       </image>
     </screenshot>
     <screenshot>
       <caption>Main window with dark theme</caption>
       <image>
-        https://github.com/elly-codes/cherrypick/blob/main/data/screenshots/window-dark.png?raw=true
+        https://github.com/elly-code/cherrypick/blob/main/data/screenshots/window-dark.png?raw=true
       </image>
     </screenshot>
   </screenshots>
@@ -79,7 +79,7 @@
         </ul>
       </description>
       <issues>
-        <issue url="https://github.com/elly-codes/cherrypick/issues/21">Fix alpha not being restored properly</issue>
+        <issue url="https://github.com/elly-code/cherrypick/issues/21">Fix alpha not being restored properly</issue>
       </issues>
     </release>
     <release date="2025-09-13" version="2.1.2">

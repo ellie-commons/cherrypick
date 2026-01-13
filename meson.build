@@ -1,4 +1,4 @@
-project('io.github.elly_codes.cherrypick', 
+project('io.github.elly_code.cherrypick', 
 'c', 'vala', 
 version: '2.3.0')
 
