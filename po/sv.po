@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.elly_code.cherrypick package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.elly_code.cherrypick\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-26 17:04+0100\n"
+"PO-Revision-Date: 2026-01-14 15:57+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#. /TRANSLATORS: Do not translate app name
+#. We need to hide the title area for the split headerbar
+#: src/Windows/Window.vala:31 src/Windows/Window.vala:48
+msgid "Cherrypick"
+msgstr "Cherrypick"
+
+#: src/Widgets/FormatArea.vala:66
+msgid "Click to paste a colour if you have one saved up"
+msgstr "Klicka för att klistra in en färg om du har en sparad"
+
+#: src/Widgets/FormatArea.vala:69
+msgid "Click to copy this colour to your clipboard"
+msgstr "Klicka för att kopiera denna färg till urklipp"
+
+#: src/Widgets/FormatArea.vala:75
+msgid "Choose your preferred format to display picked colours"
+msgstr "Välj önskat format för att visa valda färger"
+
+#: src/Widgets/FormatArea.vala:109
+msgid "Copied to clipboard!"
+msgstr "Kopierad till urklipp!"
+
+#: src/Widgets/FormatArea.vala:138
+msgid "Cannot detect colour!"
+msgstr "Kan inte upptäcka färg!"
+
+#: src/Widgets/HistoryHeader.vala:19
+msgid "History"
+msgstr "Historik"
+
+#: src/Widgets/HistoryHeader.vala:28
+msgid "Save a snapshot of current color history"
+msgstr "Spara en ögonblicksbild av aktuell färghistorik"
+
+#: src/Widgets/HistoryHeader.vala:33
+msgid "Restore history snapshot"
+msgstr "Återställ historikens ögonblicksbild"
+
+#: src/Widgets/HistoryHeader.vala:53
+msgid "History saved"
+msgstr "Historik sparad"
+
+#: src/Application.vala:129
+msgid "Pick a colour and copy it to clipboard"
+msgstr "Välj en färg och kopiera den till urklipp"
